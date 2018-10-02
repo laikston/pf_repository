@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ssds_ledconfigurator</title>
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/ssds_common.css">
+    <link rel="stylesheet" href="../styles/ssds_ledconfigurator.css">
+  </head>
+  <body>
+      <main>
+          <div class="area-box title-area">
+            <div class="area-inner-box-1400">
+                <div class="title-wrap">
+                    <h1>LED Configurator</h1>
+                    <a href="javascript:;" class="blue-common-btn need-help-step-btn">need help ?</a>
+                </div>
+            </div>
+            <div class="need-help-step" style="display:none;">
+                <div class="layer need-help-step-01">
+                    <h2>Configuration Option</h2>
+                    <p>Click any of these buttons to configure the room, LED Signage or the content of the LED Signage</p>
+                    <a href="javascript:;" class="pink-btn step-next-btn">NEXT : SCENARIO</a>
+                </div>
+                <div class="layer need-help-step-02">
+                    <h2>Scenario</h2>
+                    <p>This is where all the configurations you make will be reflected and can be seen in two different views, Blueprint and Render.</p>
+                    <a href="javascript:;" class="pink-btn step-next-btn">NEXT : EXPORT TO PDF</a>
+                </div>
+                <div class="layer need-help-step-03">
+                    <h2>Export to PDF</h2>
+                    <p>When you have finished configuring your LED Signage, click here to download the PDF.</p>
+                    <a href="javascript:;" class="pink-btn step-next-btn">NEXT : FINISH WIZARD</a>
+                </div>
+            </div>
+          </div>
+          <div class="area-box option-tab-area">
+              <div class="area-inner-box-1200 option-tab-area-wrap">
+                <div class="option-tab">
+                    <div class="option-tab-btn">
+                        <h3><span>1</span>room configuration</h3>
+                        <ul>
+                            <li><a href="javascript:;">Define Wall Size</a></li>
+                        </ul>
+                    </div>
+                    <div class="option-tab-btn option-tab-btn-wide">
+                        <h3><span>2</span>DISPLAY CONFIGURATION</h3>
+                        <ul>
+                            <li><a href="javascript:;">Choose Model</a></li>
+                            <li><a href="javascript:;">Display Layout</a></li>
+                        </ul>
+                    </div>
+                    <div class="option-tab-btn">
+                        <h3><span>3</span>Content Configuration</h3>
+                        <ul>
+                            <li><a href="javascript:;">Upload Content</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="option-conts" style="display:none;">
+                    <div class="option-con">
+                        <ul>
+                            <li>
+                                <div class="unit-btn">
+                                    <a href="javascript:;" class="blue-common-btn arr-btn">feet</a>
+                                    <a href="javascript:;" class="blue-common-btn arr-btn">meters</a>
+                                </div>
+                                <div class="wall-size">
+                                    <dl>
+                                        <dt>Width (m)</dt>
+                                        <dd>
+                                            <input type="number" />
+                                            <div class="count-btn">
+                                                <a href="javascript:;" class="up"></a>
+                                                <a href="javascript:;" class="down"></a>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Height (m)</dt>
+                                        <dd>
+                                            <input type="number" />
+                                            <div class="count-btn">
+                                                <a href="javascript:;" class="up"></a>
+                                                <a href="javascript:;" class="down"></a>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="option-con">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="blue-common-btn arr-btn">Select Model</a>
+                                <dl>
+                                    <dt>Model Name : </dt>
+                                    <dd>"IF012J"</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <div class="display-layout">
+                                    <dl>
+                                        <dt>Columns</dt>
+                                        <dd>
+                                            <input type="number" />
+                                            <div class="count-btn">
+                                                <a href="javascript:;" class="up"></a>
+                                                <a href="javascript:;" class="down"></a>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Rows</dt>
+                                        <dd>
+                                            <input type="number" />
+                                            <div class="count-btn">
+                                                <a href="javascript:;" class="up"></a>
+                                                <a href="javascript:;" class="down"></a>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <a href="javascript:;" class="reset-btn">reset</a>
+                                <div class="resolution-btn">
+                                    <a href="javascript:;" class="blue-common-btn">fhd</a>
+                                    <a href="javascript:;" class="blue-common-btn">uhd</a>
+                                </div>
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="option-con">
+                        <ul>
+                            <li>
+                                <input type="file"/>
+                                <select>
+                                    <option>Default Image</option>
+                                </select>
+                                <span>IMAGE : jpg or png only, max 3mb</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+              
+
+          </div>
+          <div clsss="area-box wall-display-area">
+
+          </div>
+          <div class="area-box btn-area">
+
+          </div>
+      </main>
+  </body>
+</html>

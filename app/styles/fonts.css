@@ -1,0 +1,18 @@
+@font-face {
+    font-family:'SamsungOneLt';
+    src:url('../fonts/SamsungOneLt.eot');
+    src:url('../fonts/SamsungOneLt?#iefix') format('embedded-opentype'),
+        url('../fonts/SamsungOneLt.woff') format('woff'),
+        url('../fonts/SamsungOneLt.svg#SamsungOneLt') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'SamsungOneRg';
+    src:url('../fonts/SamsungOneRg.eot');
+    src:url('../fonts/SamsungOneRg?#iefix') format('embedded-opentype'),
+        url('../fonts/SamsungOneRg.woff') format('woff'),
+        url('../fonts/SamsungOneRg.svg#SamsungOneLt') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
