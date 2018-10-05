@@ -3,11 +3,57 @@
 
 .area-inner-box-1400{max-width:1400px;}
 .area-inner-box-1200{max-width:1200px;}
+.area-inner-box-960{max-width:960px;}
 
-.title-area .title-wrap{position:relative;margin:75px 0 30px 0;}
-.title-area h1{text-align:center;font-size:50px;}
+.title-area{padding:75px 0 30px 0;}
+.title-area .title-wrap{position:relative;}
+.title-area h1{font-family:'SamsungOneLt';text-align:center;font-size:50px;color:#000;}
 .title-area .need-help-step-btn{position:absolute;top:12px;right:0;}
 
-.option-tab-area{background:#5d7ecb;color:#fff;}
-.option-tab-area .option-tab .option-tab-btn{width:382px;display:block;}
+.option-tab-area{height:234px;}
+.option-tab-area .option-tab{overflow:hidden;background:#5d7ecb;color:#fff;}
+.option-tab-area .option-tab .area-inner-box-1200{overflow:hidden;}
+.option-tab-area .option-tab .option-tab-btn{float:left;width:382px;display:block;margin:30px 0 0 0;background:url('../images/ssds_configurator/line_opt_diver.gif') no-repeat right top;}
+.option-tab-area .option-tab .option-tab-btn.content-tab-btn{border-right:none;}
 .option-tab-area .option-tab .option-tab-btn-wide{width:436px;}
+.option-tab-area .option-tab .option-tab-btn h3{font-family:'SamsungOneLt';font-size:16px;text-transform:uppercase;text-align:center;}
+.option-tab-area .option-tab .option-tab-btn h3 span{display:inline-block;border:1px solid #fff;border-radius:100%;width:20px;height:20px;margin-right:10px;}
+.option-tab-area .option-tab .option-tab-btn li{width:196px;margin:24px auto 0;padding:0 0 28px 0;}
+.option-tab-area .option-tab .option-tab-btn-wide ul{width:368px;margin:0 auto;overflow:hidden;}
+.option-tab-area .option-tab .option-tab-btn-wide li{display:block;width:184px;float:left;}
+.option-tab-area .option-tab .option-tab-btn li.active{background:url('../images/ssds_configurator/anchor_this_item.gif') no-repeat bottom center;}
+.option-tab-area .option-tab .option-tab-btn li a{display:block;font-family:'SamsungOneLt';font-size:15px;text-align:center;padding-top:48px;width:124px;margin:0 auto;}
+.option-tab-area .option-tab .option-tab-btn.room-tab-btn li a{background:url('../images/ssds_configurator/icon_configurator01.gif') no-repeat top center;opacity:.4;}
+.option-tab-area .option-tab .option-tab-btn.room-tab-btn li.active a{opacity:1;}
+.option-tab-area .option-tab .option-tab-btn.display-tab-btn li a{background:url('../images/ssds_configurator/icon_configurator03.gif') no-repeat top center;opacity:.4;}
+.option-tab-area .option-tab .option-tab-btn.display-tab-btn li.active a{opacity:1;}
+.option-tab-area .option-tab .option-tab-btn.display-tab-btn li:first-child a{background:url('../images/ssds_configurator/icon_configurator02.gif') no-repeat top center;opacity:.4;}
+.option-tab-area .option-tab .option-tab-btn.display-tab-btn li:first-child.active a{opacity:1;}
+.option-tab-area .option-tab .option-tab-btn.content-tab-btn li a{background:url('../images/ssds_configurator/icon_configurator05.gif') no-repeat top center;opacity:.4;}
+.option-tab-area .option-tab .option-tab-btn.content-tab-btn li.active a{opacity:1;}
+
+.option-tab-area .option-conts{height:63px;background:#fff;overflow:hidden;}
+.option-tab-area .option-conts .area-inner-box-960{position:relative;height:100%;}
+.option-tab-area .option-conts .option-con{position:absolute;top:0;left:0;display:none;padding:11px 10px 0;}
+
+.option-tab-area .option-conts .option-con.room-option-con li{overflow:hidden;}
+.option-tab-area .option-conts .option-con.room-option-con li > div{float:left;}
+.option-tab-area .option-conts .option-con.room-option-con li > div.wall-size{overflow:hidden;margin:5px 0 0 0;font-family:'SamsungOneLt';font-size:15px;}
+.option-tab-area .option-conts .option-con.room-option-con li > div.wall-size dl{float:left;overflow:hidden;margin-left:10px;}
+.option-tab-area .option-conts .option-con.room-option-con li > div.wall-size dl:first-child{margin-left:20px;}
+
+
+.option-tab-area .option-conts .option-con.display-option-con li.choose-model-con{overflow:hidden;}
+.option-tab-area .option-conts .option-con.display-option-con li.choose-model-con a{float:left;}
+.option-tab-area .option-conts .option-con.display-option-con li.choose-model-con dl{float:left;font-family:'SamsungOneLt';font-size:15px;margin:10px 0 0 0;overflow:hidden;}
+.option-tab-area .option-conts .option-con.display-option-con li.choose-model-con dl dt{margin:0 0 0 20px;float:left;line-height:1.4;}
+.option-tab-area .option-conts .option-con.display-option-con li.choose-model-con dl dd{margin:0 0 0 5px;float:left;font-size:18px;color:#f48fb1;}
+
+.option-tab-area .option-conts .option-con.display-option-con li.display-layout-con{overflow:hidden;}
+.option-tab-area .option-conts .option-con.display-option-con li.display-layout-con .display-layout-con-inner{float:left;overflow:hidden;font-family:'SamsungOneLt';font-size:15px;}
+.option-tab-area .option-conts .option-con.display-option-con li.display-layout-con .display-layout-con-inner dl{float:left;margin-left:10px;}
+.option-tab-area .option-conts .option-con.display-option-con li.display-layout-con .display-layout-con-inner dl:first-child{margin-left:20px;}
+.option-tab-area .option-conts .option-con.display-option-con li.display-layout-con > a{float:left;margin-left:20px;}
+.option-tab-area .option-conts .option-con.display-option-con li.display-layout-con .resolution-btn{float:left;margin-left:20px;}
+
+.option-tab-area .option-conts .option-con.content-option-con{display:block;}
