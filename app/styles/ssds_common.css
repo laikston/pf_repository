@@ -1,8 +1,9 @@
 @import "fonts.css";
 
-[class*="-common-btn"]{font-family:'SamsungOneRg' !important;padding:12px 20px 0 20px;height:44px;font-size:17px;text-transform:uppercase;line-height:1;display:inline-block;}
+[class*="-common-btn"]{font-family:'SamsungOneRg' !important;padding:11px 20px 0;height:42px;font-size:17px;text-transform:uppercase;line-height:1;display:block;background:#fff;}
 .blue-common-btn{color:#4774cf !important;border:2px solid #4774cf;}
 .pink-common-btn{color:#f48fb1 !important;border:2px solid #f48fb1;}
+.big-common-btn{height:50px;padding:15px 25px 0;}
 .arr-common-btn:after{content:'';display:inline-block;width:5px;height:12px;background:url('../images/ssds_configurator/btn_m_arrow1.gif') no-repeat 0 center;margin-left:5px;}
 .reset-common-btn:before{content:'';display:block;float:left;width:19px;height:18px;background:url('../images/ssds_configurator/btn_led_reset2_icon.png') no-repeat 0 center;margin:-1px 5px 0 0;}
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {appearance:none;-webkit-appearance:none;-moz-appearance:none;margin: 0;}
