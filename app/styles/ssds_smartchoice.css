@@ -33,10 +33,27 @@
 .result-section .description-area .btn-area a.btn-reset:before{content:'';width:35px;height:35px;position:absolute;top:10px;margin-left:-35px;background:url('../images/ssds_configurator/set_btn_reset.png') no-repeat 0 0;}
 
 /* more-section */
-.more-section{display:table;margin-top:30px;}
-.more-section > div{display:table-cell;padding:30px 20px;}
-.more-section .measure-area .product-measure ul{overflow:hidden;font-size:20px;font-family:'SamsungOneLt';margin-top:20px;}
-.more-section .measure-area .product-measure li{width:33.3333%;float:left;}
-.more-section .measure-area .product-measure li span{color:#3d63ba;display:inline-block;position:relative;padding-left:15px;}
-.more-section .measure-area .product-measure li span:before{content:'';position:absolute;left:0;top:12px;width:3px;height:3px;background:#222;}
+.more-section{display:table;margin-top:30px;width:100%;}
+.more-section > div{display:table-cell;padding:30px;font-family:'SamsungOneLt';width:50%;}
+.more-section .measure-area{padding:30px 100px 30px 20px;}
+.more-section .measure-area .product-area{margin-top:76px;}
+.more-section .measure-area .product-area ul{overflow:hidden;font-size:20px;margin-top:100px;}
+.more-section .measure-area .product-area li{width:33.3333%;float:left;}
+.more-section .measure-area .product-area li span{color:#3d63ba;display:inline-block;position:relative;padding-left:15px;}
+.more-section .measure-area .product-area li span:before{content:'';position:absolute;left:0;top:12px;width:3px;height:3px;background:#222;}
 .more-section .measure-area .btn-area{margin-top:50px;}
+.more-section .measure-area .product-area .product-measure{font-size:20px;color:#3d63ba;position:relative;}
+.more-section .measure-area .product-area .product-measure img{width:100%;}
+.more-section .measure-area .product-area .product-measure span{position:absolute;display:block;width:100%;}
+.more-section .measure-area .product-area .product-measure .h-measure{top:-15px;left:0;height:10px;border-left:1px solid #000;border-right:1px solid #000;}
+.more-section .measure-area .product-area .product-measure .h-measure em{display:block;margin-top:-30px;}
+.more-section .measure-area .product-area .product-measure .h-measure:before{content:'';width:100%;height:1px;position:absolute;background:#000;top:5px;left:0;}
+.more-section .measure-area .product-area .product-measure .v-measure{top:0;right:-15px;width:10px;height:100%;border-top:1px solid #000;border-bottom:1px solid #000;}
+.more-section .measure-area .product-area .product-measure .v-measure em{display:block;position:absolute;right:-20px;top:50%;}
+.more-section .measure-area .product-area .product-measure .v-measure:before{content:'';width:1px;height:100%;position:absolute;background:#000;top:0;left:5px;}
+.more-section .spec-area .spec-title{padding:10px 15px;color:#fff;font-size:17px;background:#434655;}
+.more-section .spec-area table{width:100%;font-size:13px;}
+.more-section .spec-area th, .more-section .spec-area td{width:20%;text-align:center;padding:10px;border:1px solid #c7d2ee;color:#4774cf;}
+.more-section .spec-area th{background:#e8f0ff;border-left:none;}
+.more-section .spec-area td{background:#f3f7ff;}
+.more-section .spec-area td.cont{background:#fff;color:#777;border-right:none;}

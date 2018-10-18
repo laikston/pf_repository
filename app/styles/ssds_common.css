@@ -18,3 +18,6 @@ dl.input-count-group dd input{height:100%;width:50px;margin-left:10px;float:left
 dl.input-count-group dd .count-btn{width:30px;float:right;}
 dl.input-count-group dd .count-btn a{display:block;width:30px;height:17px;background:url('../images/ssds_configurator/arrow_up.gif') no-repeat 0 0;}
 dl.input-count-group dd .count-btn a.down{background:url('../images/ssds_configurator/arrow_down.gif') no-repeat 0 0;}
+
+/* width resolution */
+.fix-width-1240{width:100%;max-width:1240px;margin:0 auto;}
