@@ -1,3 +1,49 @@
+@font-face {
+    font-family:'gotham-book';
+    src:url('../fonts/gotham-book.eot');
+    src:url('../fonts/gotham-book?#iefix') format('embedded-opentype'),
+        url('../fonts/gotham-book.woff') format('woff'),
+        url('../fonts/gotham-book.svg#gotham-book') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
 html, body{width:100%;height:100%;overflow:hidden;}
-.login-section{position:relative;width:100%;height:100%;background:url('../images/titlelist_surefit/bg_main.jpg') no-repeat;background-size:cover;}
-.login-section:before{content:'';position:absolute;left:0;top:0;width:100%;height:50px;background:#000;opacity:.5;}
+a.red-common-btn{font-family:'gotham-book';font-size:16px;color:#fff;background:#e31738;padding:14px 35px;border-radius:3px;}
+
+
+
+
+.main-wrap{position:relative;padding:120px 0 0 0;width:100%;height:100%;background:url('../images/titlelist_surefit/bg_main.jpg') no-repeat;background-size:cover;}
+.main-wrap:before{content:'';position:absolute;left:0;top:0;width:100%;height:50px;background:#000;opacity:.5;}
+.title-section h1{position:relative;text-align:center;}
+.title-section h1 img{width:100%;max-width:226px;}
+.title-section h2{position:relative;text-align:center;margin:50px 0 0;}
+.title-section h2 img{width:100%;max-width:140px;}
+.login-section{text-align:center;margin:100px;}
+.login-section input[type="text"]{width:400px;padding:15px;border-radius:3px;}
+.login-section a.red-common-btn{margin:0 0 0 10px;}
+.footer-section{position: absolute;bottom:20px;left:0;width:100%;}
+.footer-section p{text-align:center;}
+.footer-section .version{margin-left:30px;float:left;}
+
+.sub-wrap{position:relative;}
+.sub-wrap header{position:fixed;height:43px;width:100%;text-align:center;color:#fff;font-size:13px;background:url('../images/titlelist_surefit/bg_header_sub.gif') repeat-x;border-bottom:2px solid #e31738;}
+.sub-wrap header .sub-logo{height:29px;margin-top:5px;}
+.sub-wrap header .sub-prev{float:left;margin:15px 0 0 20px;}
+.sub-wrap header .sub-option{float:right;}
+.sub-wrap header .sub-option ul{overflow:hidden;}
+.sub-wrap header .sub-option li{float:left;}
+.sub-wrap header .sub-option .sub-mode{margin-top:15px;}
+.sub-wrap header .sub-option .sub-mode a{padding-left:25px;background-size:20px auto;background-position:0 2px;background-repeat:no-repeat;}
+.sub-wrap header .sub-option .sub-mode .online{background-image:url('../images/titlelist_surefit/ico_online.png');}
+.sub-wrap header .sub-option .sub-mode .offline{background-image:url('../images/titlelist_surefit/ico_offline.png');}
+.sub-wrap header .sub-option .sub-sync{position:relative;margin:10px 15px 0;}
+.sub-wrap header .sub-option .sub-sync a{display:block;width:20px;}
+.sub-wrap header .sub-option .sub-sync img{width:100%;}
+.sub-wrap header .sub-option .sub-sync .sub-update{position:absolute;width:3px;height:3px;border-radius:100%;background:#e31738;top:0;right:-3px;}
+
+
+
+
+

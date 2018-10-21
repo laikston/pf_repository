@@ -1,6 +1,24 @@
-@import "fonts.css";
+/* @import "fonts.css"; */
+@font-face {
+    font-family:'SamsungOneLt';
+    src:url('../fonts/SamsungOneLt.eot');
+    src:url('../fonts/SamsungOneLt?#iefix') format('embedded-opentype'),
+        url('../fonts/SamsungOneLt.woff') format('woff'),
+        url('../fonts/SamsungOneLt.svg#SamsungOneLt') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'SamsungOneRg';
+    src:url('../fonts/SamsungOneRg.eot');
+    src:url('../fonts/SamsungOneRg?#iefix') format('embedded-opentype'),
+        url('../fonts/SamsungOneRg.woff') format('woff'),
+        url('../fonts/SamsungOneRg.svg#SamsungOneLt') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
 
-[class*="-common-btn"]{font-family:'SamsungOneRg' !important;padding:11px 20px 0;height:42px;font-size:17px;text-transform:uppercase;line-height:1;display:block;background:#fff;}
+[class*="-common-btn"]{font-family:'SamsungOneRg' !important;padding:11px 20px 0;height:42px;font-size:17px;text-transform:uppercase;line-height:1;display:inline-block;background:#fff;}
 .blue-common-btn{color:#4774cf !important;border:2px solid #4774cf;}
 .pink-common-btn{color:#f48fb1 !important;border:2px solid #f48fb1;}
 .big-common-btn{height:50px;padding:15px 25px 0;}
