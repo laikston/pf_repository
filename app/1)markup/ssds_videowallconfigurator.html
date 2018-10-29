@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ssds_videowallconfigurator</title>
+        <link rel="stylesheet" href="../styles/base.css">
+        <link rel="stylesheet" href="../styles/ssds_common.css">
+        <link rel="stylesheet" href="../styles/ssds_configurator.css">
+        <link rel="stylesheet" href="../styles/ssds_videoconfigurator.css">
+    </head>
+    <body>
+        <main>
+            <div class="area-box title-area">
+                <div class="area-inner-box-1400">
+                    <div class="title-wrap">
+                        <h1>Videowall Configurator</h1>
+                        <a href="javascript:;" class="blue-common-btn need-help-step-btn">need help ?</a>
+                    </div>
+                </div>
+                <div class="need-help-step" style="display:none;">
+                    <div class="layer need-help-step-01">
+                        <h2>Configuration Option</h2>
+                        <p>Click any of these buttons to configure the room, LED Signage or the content of the LED Signage</p>
+                        <a href="javascript:;" class="pink-btn step-next-btn">NEXT : SCENARIO</a>
+                    </div>
+                    <div class="layer need-help-step-02">
+                        <h2>Scenario</h2>
+                        <p>This is where all the configurations you make will be reflected and can be seen in two different views, Blueprint and Render.</p>
+                        <a href="javascript:;" class="pink-btn step-next-btn">NEXT : EXPORT TO PDF</a>
+                    </div>
+                    <div class="layer need-help-step-03">
+                        <h2>Export to PDF</h2>
+                        <p>When you have finished configuring your LED Signage, click here to download the PDF.</p>
+                        <a href="javascript:;" class="pink-btn step-next-btn">NEXT : FINISH WIZARD</a>
+                    </div>
+                </div>
+            </div>
+            <div class="area-box option-tab-area">
+                <div class="option-tab">
+                    <div class="area-inner-box-1200">
+                        <div class="option-tab-btn room-tab-btn">
+                            <h3><span>1</span>room configuration</h3>
+                            <ul>
+                                <li class="active"><a href="javascript:;">Define Wall Size</a></li>
+                            </ul>
+                        </div>
+                        <div class="option-tab-btn option-tab-btn-wide display-tab-btn">
+                            <h3><span>2</span>DISPLAY CONFIGURATION</h3>
+                            <ul>
+                                <li><a href="javascript:;">Choose Model</a></li>
+                                <li><a href="javascript:;">Display Layout</a></li>
+                                <li><a href="javascript:;">Orientation</a></li>
+                            </ul>
+                        </div>
+                        <div class="option-tab-btn content-tab-btn">
+                            <h3><span>3</span>Content Configuration</h3>
+                            <ul>
+                                <li><a href="javascript:;">Upload Content</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="option-conts">
+                    <div class="area-inner-box-960">
+                        <div class="option-con room-option-con">
+                            <ul>
+                                <li>
+                                    <div class="unit-btn">
+                                        <a href="javascript:;" class="blue-common-btn arr-common-btn">feet</a>
+                                        <a href="javascript:;" class="blue-common-btn arr-common-btn">meters</a>
+                                    </div>
+                                    <div class="wall-size">
+                                        <dl class="input-count-group">
+                                            <dt>Width (m)</dt>
+                                            <dd>
+                                                <input type="number" />
+                                                <div class="count-btn">
+                                                    <a href="javascript:;" class="up"></a>
+                                                    <a href="javascript:;" class="down"></a>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="input-count-group">
+                                            <dt>Height (m)</dt>
+                                            <dd>
+                                                <input type="number" />
+                                                <div class="count-btn">
+                                                    <a href="javascript:;" class="up"></a>
+                                                    <a href="javascript:;" class="down"></a>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="option-con display-option-con">
+                            <ul>
+                                <li class="choose-model-con">
+                                    <a href="javascript:;" class="blue-common-btn arr-common-btn">Select Model</a>
+                                    <dl>
+                                        <dt>Model Name : </dt>
+                                        <dd>"IF012J"</dd>
+                                    </dl>
+                                </li>
+                                <li class="display-layout-con">
+                                    <div class="display-layout-con-inner">
+                                        <dl class="input-count-group">
+                                            <dt>Columns</dt>
+                                            <dd>
+                                                <input type="number" />
+                                                <div class="count-btn">
+                                                    <a href="javascript:;" class="up"></a>
+                                                    <a href="javascript:;" class="down"></a>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <dl class="input-count-group">
+                                            <dt>Rows</dt>
+                                            <dd>
+                                                <input type="number" />
+                                                <div class="count-btn">
+                                                    <a href="javascript:;" class="up"></a>
+                                                    <a href="javascript:;" class="down"></a>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <a href="javascript:;" class="pink-common-btn reset-common-btn">reset</a>
+                                    <div class="resolution-btn">
+                                        <a href="javascript:;" class="blue-common-btn">fhd</a>
+                                        <a href="javascript:;" class="blue-common-btn">uhd</a>
+                                    </div>
+                                </li>
+                                <li class="orientation-con">
+                                    <select>
+                                        <option>landscape</option>
+                                        <option>portrait</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="option-con content-option-con">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" class="blue-common-btn arr-common-btn upload-btn">BROWSE…<input type="file"/></a>
+                                    <select>
+                                        <option>Default Image</option>
+                                        <option>No Image</option>
+                                        <option>Sample Video</option>
+                                    </select>
+                                    <span class="desc">IMAGE : jpg or png only, max 3mb</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area-box wall-display-area">
+                <div class="area-inner-box-1200 wall-display-area-inner">
+                    <div class="pdf-area">
+                        <div class="wall-area">
+                            <div class="wall">
+                                <div class="menu-area">
+                                    <ul>
+                                        <li><a href="javascript:;"></a></li>
+                                        <li><a href="javascript:;"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="control-btns v-count-area">
+                                    <ul>
+                                        <li class="control-plus"><a href="javascript:;"></a></li>
+                                        <li class="control-minus"><a href="javascript:;"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="control-btns h-count-area">
+                                        <ul>
+                                            <li class="control-plus"><a href="javascript:;"></a></li>
+                                            <li class="control-minus"><a href="javascript:;"></a></li>
+                                        </ul>
+                                    </div>
+                                <div class="display-area">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" width="220.27" height="61.95">
+                                        <path id="col-line" ng-d="M110.63807999999999,0 L110.63807999999999,59.9573248 " style="stroke:#a1a1a1; fill:none; stroke-opacity:0.6;" d="M110.63807999999999,0 L110.63807999999999,59.9573248 "></path>
+                                        <path id="row-line" ng-d="" style="stroke:#a1a1a1; fill:none; stroke-opacity:0.6;" d=""></path>
+                                    </svg>
+                                </div>
+                                <div class="model-tag">IF012J</div>
+                            </div>
+                            <div class="h-measure-tag-area">
+                                <div class="measure-line h-wall-measure-line h-wall-measure-left"><div class="tag-area"><span>1.694 m</span></div></div>
+                                <div class="measure-line h-wall-measure-line h-wall-measure-right"><div class="tag-area"><span>1.694 m</span></div></div>
+                                <div class="measure-line h-display-measure"><div class="tag-area"><span>1.694 m</span></div></div>
+                            </div>
+                            <div class="v-measure-tag-area">
+                                <div class="measure-line v-wall-measure-line v-wall-measure-top"><div class="tag-area"><span>1.694 m</span></div></div>
+                                <div class="measure-line v-wall-measure-line v-wall-measure-bottom"><div class="tag-area"><span>1.694 m</span></div></div>
+                                <div class="measure-line v-display-measure"><div class="tag-area"><span>1.694 m</span></div></div>
+                            </div>
+                        </div>
+                        <div class="person-area">
+                            <img src="../images/ssds_configurator/guy_led.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area-box btn-area">
+                <div class="area-inner-box-1200">
+                    <div class="mode-btns">
+                        <ul>
+                            <li><a href="javascript:;" class="blue-common-btn big-common-btn">BLUEPRINT</a></li>
+                            <li><a href="javascript:;" class="blue-common-btn big-common-btn">RENDER</a></li>
+                        </ul>
+                    </div>
+                    <div class="pdf-btns">
+                        <a href="javascript:;" class="pink-common-btn big-common-btn">EXPORT TO PDF</a>
+                    </div>
+                </div>
+            </div>
+            <div class="area-box spec-area">
+                <div class="area-inner-box-1200">
+                    <div class="spec-title-area">
+                        <h3>Specifications</h3>
+                        <span class="spec-model"><a href="#">IF012J</a></span>
+                    </div>
+                    <table class="spec-table">
+                        <tr>
+                            <th class="spec-head" rowspan="2">DISPLAY REQUIREMENTS</td>
+                            <td class="spec-stitle">Total No. of Displays</td>
+                            <td class="spec-cont">1</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-stitle">Screen Configuration (WxH)</td>
+                            <td class="spec-cont">1 x 1</td>
+                        </tr>
+                        <tr>
+                            <th class="spec-head" rowspan="3">DISPLAY WALL DIMENSIONS</td>
+                            <td class="spec-stitle">Dimensions (WxHxD)</td>
+                            <td class="spec-cont">1.21 x 0.68 x 0.10 m</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-stitle">Diagonal</td>
+                            <td class="spec-cont">54.72 inch</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-stitle">Weight</td>
+                            <td class="spec-cont">21 kg</td>
+                        </tr>
+                        <tr>
+                            <th class="spec-head" rowspan="2">POWER REQUIREMENTS</td>
+                            <td class="spec-stitle">Max</td>
+                            <td class="spec-cont">297 (W/h)</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-stitle">Typical</td>
+                            <td class="spec-cont">180 (W/h)</td>
+                        </tr>
+                    </table>
+                    <p class="spec-desc"><i>* Specifications are subject to change without notice.</i></p>
+                </div>
+            </div>
+            <div class="layer" style="display:none;">
+                    <div class="layer-dimmed"></div>
+                    <div class="layer-inner-wrap">
+                        <h3>You need to log in to export</h3>
+                        <div class="layer-content"></div>
+                        <a href="javascript:;" class="layer-close">layer close</a>
+                    </div>
+                </div>
+                <div class="layer layer-choose-model" style="display:none;">
+                    <div class="layer-dimmed"></div>
+                    <div class="layer-inner-wrap">
+                        <h3>Choose display to be configurator</h3>
+                        <div class="layer-content">
+                            <div class="choose-model-detail">
+                                <img src="https://vd-dsg.s3.amazonaws.com/logs/upload/010103/1473128056353_m_LH55UHFHLBB-EN_001_Front_Black.png" />
+                                <p class="choose-model-title"><a href="javascript:;">UH55F-E</a></p>
+                                <dl>
+                                    <dt>Dimension</dt>
+                                    <dd>1211.6 X 682.4 X 96.3</dd>
+                                    <dt>Resolution</dt>
+                                    <dd>1920 X 1080 (Full HD)</dd>
+                                    <dt>Power ConsumptionMax[W/h]</dt>
+                                    <dd>297.0</dd>
+                                    <dt>Weight</dt>
+                                    <dd>21 kg</dd>
+                                </dl>
+                                <div class="common-btn-area">
+                                    <a href="javascript:;" class="blue-common-btn arr-common-btn">CHOOSE THIS MODEL</a>
+                                </div>
+                            </div>
+                            <div class="choose-model-list">
+                                <div class="tab-con">
+                                    <table>
+                                        <tr>
+                                            <th>Model</th>
+                                            <th>Operation time</th>
+                                            <th>Brightness</th>
+                                            <th>Bezel</th>
+                                            <th>Size</th>
+                                        </tr>
+                                        <tr>
+                                            <td>UH55F-E</td>
+                                            <td>24/7</td>
+                                            <td>700 nit</td>
+                                            <td>1.15mm(U/L)</td>
+                                            <td>55"</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="layer-close">layer close</a>
+                    </div>
+                </div>
+        </main>
+    </body>
+</html>

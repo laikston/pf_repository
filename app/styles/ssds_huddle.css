@@ -4,20 +4,19 @@
 .huddle-room-wrap .contents-area  > div{height:410px;}
 
 .contents-area .s-txt{font-size:22px;color:#4774cf;text-align:center;margin:10px 0 0;}
-.contents-area .solution-area{background:#fff;width:1200px;margin:30px auto 0;}
+.contents-area .solution-area{background:#fff;max-width:1200px;width:100%;margin:30px auto 0;}
 .contents-area .solution-area .question-box{font-size:18px;color:#bbb;}
 .contents-area .solution-area .active .question-box{color:#222;}
 .contents-area .solution-area .option-box{font-size:15px;height:100%;overflow:hidden;padding-right:10px;}
 .contents-area .solution-area .option-box ul{display:table;height:100%;}
-.contents-area .solution-area .option-box li{position:relative;display:table-cell;vertical-align:middle;line-height:36px;}
+.contents-area .solution-area .option-box li{display:table-cell;vertical-align:middle;line-height:36px;}
 .contents-area .solution-area .option-box input[type="radio"]{appearance:none;position:absolute;left:-9999px;}
-.contents-area .solution-area .option-box input[type="radio"]+label{display:block;width:60px;text-align:center;border-radius:0;border:1px solid #fff;background:#e6e6e6;}
-.contents-area .solution-area .active .option-box input[type="radio"]+label{border:1px solid #c5c5c5;background:#fff;}
-.contents-area .solution-area .option-box li:not(:last-child) input[type="radio"]+label{margin:0 -1px 0 0;}
-.contents-area .solution-area .option-box li:not(:first-child) input[type="radio"]+label{border-left:none;}
+.contents-area .solution-area .option-box input[type="radio"]+label{display:block;width:61px;height:36px;border:1px solid #e6e6e6;margin:0 -1px 0 0;background-color:#e6e6e6;cursor:pointer;color:#666;text-align:center;}
+.contents-area .solution-area .option-box li:last-child input[type="radio"]+label{border-left:1px solid #fff;}
+.contents-area .solution-area .active .option-box input[type="radio"]+label{border:1px solid #c5c5c5;background:#fff;border:1px solid #c5c5c5;}
 .contents-area .solution-area .option-box li:first-child input[type="radio"]+label{border-radius:5px 0 0 5px;}
-.contents-area .solution-area .option-box li:last-child input[type="radio"]+label{border-radius:0 5px 5px 0;}
-.contents-area .solution-area .option-box li input[type="radio"]:checked+label{color:#fff;background:#82a0e6;border:1px solid #82a0e6;}
+.contents-area .solution-area .option-box li:last-child input[type="radio"]+label{border-radius:0 5px 5px 0;border-left:1px solid #c5c5c5;}
+.contents-area .solution-area .option-box li input[type="radio"]:checked+label{position:relative;color:#fff;background:#82a0e6;border:1px solid #82a0e6;}
 .contents-area .solution-area .step-area{width:50%;float:left;font-size:18px;color:#222;padding:30px;}
 .contents-area .solution-area .step-area ol{padding:0 20px;}
 .contents-area .solution-area .step-area ol > li{position:relative;height:70px;border-top:1px solid #f0eff2;font-size:0;}
@@ -47,7 +46,7 @@
 .contents-area .solution-area .view-area .view-inner-wrap{position:relative;height:100%;background:url('../images/ssds_huddle/bg_action_floor.png') no-repeat 0 bottom #f2efe8;}
 .contents-area .solution-area .view-area .size{position:absolute;left:50%;top:38px;margin-left:115px;}
 .contents-area .solution-area .view-area .size .question-box{font-size:15px;margin-bottom:3spx;}
-.contents-area .solution-area .view-area.select-size-option .size input[type="radio"]+label{background:#fff;margin:0;}
+.contents-area .solution-area .view-area.select-size-option .size input[type="radio"]+label{background:#fff;}
 .contents-area .solution-area .view-area.select-size-option .size input[type="radio"]:checked+label{background:#82a0e6;}
 .contents-area .solution-area .view-area .display{position:absolute;bottom:227px;left:50%;border:2px solid #222;border-radius:2px;background:#fff;font-size:35px;color:#222;text-align:center;padding:20px 0 0;line-height:80px;}
 .contents-area .solution-area .view-area.size-55 .display{width:220px;height:122px;margin-left:-110px;}
@@ -67,3 +66,11 @@
 .contents-area .solution-area .view-area.scheduling-y .scheduling:before{content:'';position:absolute;width:100%;height:100%;background:#fff;opacity:.3;}
 
 .btn-area{text-align: center;padding:30px 0;}
+
+@media only screen and (max-width:1185px){
+    .huddle-room-wrap .contents-area > div{height:auto;padding-left:15px;padding-right:15px;}
+    .contents-area .solution-area{width:auto;}
+    .contents-area .solution-area .step-area, .contents-area .solution-area .view-area{float:none;width:100%;height:auto;padding:0 15px 15px;}
+    .contents-area .solution-area .view-area{height:410px;}
+    .contents-area .solution-area .step-area ol{padding:0;}
+}

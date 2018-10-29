@@ -7,7 +7,7 @@
         <title>ssds_ledconfigurator</title>
         <link rel="stylesheet" href="../styles/base.css">
         <link rel="stylesheet" href="../styles/ssds_common.css">
-        <link rel="stylesheet" href="../styles/ssds_ledconfigurator.css">
+        <link rel="stylesheet" href="../styles/ssds_configurator.css">
     </head>
     <body>
         <main>
@@ -275,5 +275,64 @@
                 </div>
             </div>
         </main>
+        <div class="layer" style="display:none;">
+            <div class="layer-dimmed"></div>
+            <div class="layer-inner-wrap">
+                <h3>You need to log in to export</h3>
+                <div class="layer-content"></div>
+                <a href="javascript:;" class="layer-close">layer close</a>
+            </div>
+        </div>
+        <div class="layer layer-choose-model" style="display:none;">
+            <div class="layer-dimmed"></div>
+            <div class="layer-inner-wrap">
+                <h3>Choose display to be configurator</h3>
+                <div class="layer-content">
+                    <div class="choose-model-detail">
+                        <img src="https://vd-dsg.s3.amazonaws.com/logs/upload/010603/1539335650100_m_IF012J_001_R-Perspective_Black.jpg" />
+                        <p class="choose-model-title"><span>Indoor</span><a href="javascript:;">IF012J</a></p>
+                        <dl>
+                            <dt>Brightness</dt>
+                            <dd>1,200 nit / 600 nit</dd>
+                            <dt>Dimension</dt>
+                            <dd>806.4x453.6x76.7mm</dd>
+                            <dt>Refresh rate</dt>
+                            <dd>3,840 Hz</dd>
+                            <dt>Color Temperature</dt>
+                            <dd>6,500K</dd>
+                            <dt>LED Lifetime</dt>
+                            <dd>100,000 hours</dd>
+                        </dl>
+                        <div class="common-btn-area">
+                            <a href="javascript:;" class="blue-common-btn arr-common-btn">CHOOSE THIS MODEL</a>
+                        </div>
+                    </div>
+                    <div class="choose-model-list">
+                        <ul class="tab-btn">
+                            <li class="active"><a href="javascript:;">INDOOR</a></li>
+                            <li><a href="javascript:;">OUTDOOR</a></li>
+                            <li><a href="javascript:;">THEWALL</a></li>
+                        </ul>
+                        <div class="tab-con">
+                            <table>
+                                <tr>
+                                    <th>Model Name</th>
+                                    <th>Brightness</th>
+                                    <th>Dimensions</th>
+                                    <th>Refresh rate</th>
+                                </tr>
+                                <tr><!-- tab 바뀔때마다 데이터 바꿔줌-->
+                                    <td>IF012J</td>
+                                    <td>1,200 nit / 600 nit</td>
+                                    <td>806.4x453.6x76.7mm</td>
+                                    <td>3,840 Hz</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;" class="layer-close">layer close</a>
+            </div>
+        </div>
     </body>
 </html>

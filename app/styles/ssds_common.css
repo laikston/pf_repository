@@ -18,7 +18,9 @@
     font-style:normal;
 }
 
-[class*="-common-btn"]{font-family:'SamsungOneRg' !important;padding:11px 20px 0;height:42px;font-size:17px;text-transform:uppercase;line-height:1;display:inline-block;background:#fff;}
+a[class*="-common-btn"]{display:inline-block;font-family:'SamsungOneRg' !important;padding:0;height:42px;font-size:17px;text-transform:uppercase;line-height:1;background:#fff;padding:10px;}
+.common-btn-area{display:table;width:100%;}
+.common-btn-area a[class*="-common-btn"]{display:table-cell;text-align:center;vertical-align:middle;}
 .blue-common-btn{color:#4774cf !important;border:2px solid #4774cf;}
 .pink-common-btn{color:#f48fb1 !important;border:2px solid #f48fb1;}
 .big-common-btn{height:50px;padding:15px 25px 0;}
@@ -40,3 +42,11 @@ dl.input-count-group dd .count-btn a.down{background:url('../images/ssds_configu
 /* width resolution */
 .fix-width-1240{width:100%;max-width:1240px;margin:0 auto;}
 .fix-width-1200{width:100%;max-width:1200px;margin:0 auto;}
+
+/* layer common */
+.layer{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;}
+.layer .layer-dimmed{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:.5;}
+.layer .layer-inner-wrap{position:relative;width:600px;margin:0 auto;background:#fff;padding:40px;}
+.layer .layer-inner-wrap h3{font-family:'SamsungOneLt';font-size:32px;color:#000;text-align:center;}
+.layer .layer-inner-wrap .layer-content{margin-top:50px;}
+.layer .layer-close{position:absolute;display:block;padding:20px;width:60px;height:60px;top:0;right:0;text-indent:-9999px;background:url('../images/ssds_configurator/btn_pop_close.png') no-repeat center center;}
