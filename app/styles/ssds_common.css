@@ -18,7 +18,8 @@
     font-style:normal;
 }
 
-a[class*="-common-btn"]{display:inline-block;font-family:'SamsungOneRg' !important;padding:0;height:42px;font-size:17px;text-transform:uppercase;line-height:1;background:#fff;padding:10px;}
+a[class*="-common-btn"]{display:inline-block;font-family:'SamsungOneRg' !important;height:42px;font-size:17px;text-transform:uppercase;line-height:1;background:#fff;padding:11px 10px;text-align: center;}
+a[class*="-common-btn"] span{display:inline-block;vertical-align:top;}
 .common-btn-area{display:table;width:100%;}
 .common-btn-area a[class*="-common-btn"]{display:table-cell;text-align:center;vertical-align:middle;}
 .blue-common-btn{color:#4774cf !important;border:2px solid #4774cf;}

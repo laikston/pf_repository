@@ -34,6 +34,8 @@
 .option-tab-area .option-tab .option-tab-btn.content-tab-btn li.active a{opacity:1;}
 .option-tab-area .option-conts{height:63px;background:#fff;overflow:hidden;}
 .option-tab-area .option-conts .area-inner-box-960{position:relative;height:100%;}
+.option-tab-area .option-conts .fit-btn{position:absolute;right:0;top:11px;width:180px;height:42px;}
+.option-tab-area .option-conts .fit-btn:before{content:'';display:inline-block;width:29px;height:22px;line-height:22px;background:url('../images/ssds_configurator/btn_led_fit_icon.png') no-repeat 0 0;margin:-3px 10px 0 0;}
 .option-tab-area .option-conts .option-con{position:absolute;top:0;left:0;display:block;padding:11px 10px 0;}
 .option-tab-area .option-conts .option-con.room-option-con li{overflow:hidden;}
 .option-tab-area .option-conts .option-con.room-option-con li > div{float:left;}
@@ -125,7 +127,9 @@
 .btn-area .mode-btns ul{overflow: hidden;}
 .btn-area .mode-btns li{float: left;margin-left:10px;}
 .btn-area .mode-btns li:first-child{margin-left:0;}
+.btn-area .mode-btns li a, .btn-area .pdf-btns a{height:46px;padding-top:13px;}
 .btn-area .pdf-btns{float:right;}
+.btn-area .pdf-btns a:before{content:'';display:inline-block;width:16px;height:18px;margin-right:10px;background:url('../images/ssds_configurator/set_btn_down2.png') no-repeat 0 0;}
 .btn-area [class*="-btns"] a{width:200px;text-align:center;}
 
 .spec-area{color:#4774cf;padding:0 0 100px;font-size:16px;}
@@ -160,3 +164,4 @@
 .layer-choose-model .choose-model-list .tab-con table{font-family:'SamsungOneLt';font-size:17px;line-height:1.1;color:#222;border-top:1px solid #e1e1e1;border-bottom:1px solid #e1e1e1;}
 .layer-choose-model .choose-model-list .tab-con table th, .layer-choose-model .choose-model-list .tab-con table td{padding:15px 0;width:25%;text-align:center;}
 .layer-choose-model .choose-model-list .tab-con table th{background:#f1f5f9;border-bottom:1px solid #e1e1e1;}
+
