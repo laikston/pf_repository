@@ -16,7 +16,7 @@
                 <div class="area-inner-box-1400">
                     <div class="title-wrap">
                         <h1>Videowall Configurator</h1>
-                        <a href="javascript:;" class="blue-common-btn need-help-step-btn">need help ?</a>
+                        <a href="javascript:;" class="blue-common-btn need-help-step-btn big-common-btn">need help ?</a>
                     </div>
                 </div>
                 <div class="need-help-step" style="display:none;">
@@ -64,7 +64,6 @@
                 </div>
                 <div class="option-conts">
                     <div class="area-inner-box-960">
-                            <a href="javascript:;" class="blue-common-btn fit-btn"><span>FIT TO ROOM</span></a>
                         <div class="option-con room-option-con">
                             <ul>
                                 <li>
@@ -147,7 +146,7 @@
                             <ul>
                                 <li>
                                     <a href="javascript:;" class="blue-common-btn arr-common-btn upload-btn">BROWSE…<input type="file"/></a>
-                                    <select>
+                                    <select class="choose-file">
                                         <option>Default Image</option>
                                         <option>No Image</option>
                                         <option>Sample Video</option>
@@ -156,6 +155,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <a href="javascript:;" class="blue-common-btn fit-btn"><span>FIT TO ROOM</span></a>
                     </div>
                 </div>
             </div>
@@ -166,8 +166,9 @@
                             <div class="wall">
                                 <div class="menu-area">
                                     <ul>
-                                        <li><a href="javascript:;"></a></li>
-                                        <li><a href="javascript:;"></a></li>
+                                        <li><a href="javascript:;"></a><span class="menu-tooltip">Orientation</span></li>
+                                        <li><a href="javascript:;"></a><span class="menu-tooltip">Choose Model</span></li>
+                                        <li><a href="javascript:;"></a><span class="menu-tooltip">Upload Content</span></li>
                                     </ul>
                                 </div>
                                 <div class="control-btns v-count-area">
@@ -183,9 +184,15 @@
                                         </ul>
                                     </div>
                                 <div class="display-area">
+                                    <div class="display-bg"></div>
+                                    <div class="display-bg display-movie">
+                                        <video autoplay="" loop="" muted="" style="transform:scale(0.34, 0.17);" src=""><!-- ../images/ssds_configurator/big_buck_bunny.mp4 -->
+                                            <source src="" type="video/mp4">
+                                        </video>
+                                    </div>
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" width="220.27" height="61.95">
-                                        <path id="col-line" ng-d="M110.63807999999999,0 L110.63807999999999,59.9573248 " style="stroke:#a1a1a1; fill:none; stroke-opacity:0.6;" d="M110.63807999999999,0 L110.63807999999999,59.9573248 "></path>
-                                        <path id="row-line" ng-d="" style="stroke:#a1a1a1; fill:none; stroke-opacity:0.6;" d=""></path>
+                                        <path id="col-line" ng-d="M110.63807999999999,0 L110.63807999999999,59.9573248 " style="stroke:#000000; fill:none; stroke-opacity:1;" d="M110.63807999999999,0 L110.63807999999999,59.9573248 "></path>
+                                        <path id="row-line" ng-d="" style="stroke:#000000; fill:none; stroke-opacity:1;" d=""></path>
                                     </svg>
                                 </div>
                                 <div class="model-tag">IF012J</div>
@@ -202,7 +209,7 @@
                             </div>
                         </div>
                         <div class="person-area">
-                            <img src="../images/ssds_configurator/guy_led.png" />
+                            <img src="../images/ssds_configurator/guy.png" />
                         </div>
                     </div>
                 </div>
@@ -263,59 +270,87 @@
                 </div>
             </div>
             <div class="layer" style="display:none;">
-                    <div class="layer-dimmed"></div>
-                    <div class="layer-inner-wrap">
-                        <h3>You need to log in to export</h3>
-                        <div class="layer-content"></div>
-                        <a href="javascript:;" class="layer-close">layer close</a>
-                    </div>
+                <div class="layer-dimmed"></div>
+                <div class="layer-inner-wrap">
+                    <h3>You need to log in to export</h3>
+                    <div class="layer-content"></div>
+                    <a href="javascript:;" class="layer-close">layer close</a>
                 </div>
-                <div class="layer layer-choose-model" style="display:none;">
-                    <div class="layer-dimmed"></div>
-                    <div class="layer-inner-wrap">
-                        <h3>Choose display to be configurator</h3>
-                        <div class="layer-content">
-                            <div class="choose-model-detail">
-                                <img src="https://vd-dsg.s3.amazonaws.com/logs/upload/010103/1473128056353_m_LH55UHFHLBB-EN_001_Front_Black.png" />
-                                <p class="choose-model-title"><a href="javascript:;">UH55F-E</a></p>
-                                <dl>
-                                    <dt>Dimension</dt>
-                                    <dd>1211.6 X 682.4 X 96.3</dd>
-                                    <dt>Resolution</dt>
-                                    <dd>1920 X 1080 (Full HD)</dd>
-                                    <dt>Power ConsumptionMax[W/h]</dt>
-                                    <dd>297.0</dd>
-                                    <dt>Weight</dt>
-                                    <dd>21 kg</dd>
-                                </dl>
-                                <div class="common-btn-area">
-                                    <a href="javascript:;" class="blue-common-btn arr-common-btn">CHOOSE THIS MODEL</a>
-                                </div>
-                            </div>
-                            <div class="choose-model-list">
-                                <div class="tab-con">
-                                    <table>
-                                        <tr>
-                                            <th>Model</th>
-                                            <th>Operation time</th>
-                                            <th>Brightness</th>
-                                            <th>Bezel</th>
-                                            <th>Size</th>
-                                        </tr>
-                                        <tr>
-                                            <td>UH55F-E</td>
-                                            <td>24/7</td>
-                                            <td>700 nit</td>
-                                            <td>1.15mm(U/L)</td>
-                                            <td>55"</td>
-                                        </tr>
-                                    </table>
-                                </div>
+            </div>
+            <div class="layer layer-upload-content" style="display:none;">
+                <div class="layer-dimmed"></div>
+                <div class="layer-inner-wrap">
+                    <h3>Content Configuration</h3>
+                    <div class="layer-content">
+                        <dl>
+                            <dt>IMAGE</dt>
+                            <dd>jpg or png only, max 3mb</dd>
+                            <dt>VIDEO</dt>
+                            <dd>mp4 only, max 15mb</dd>
+                        </dl>
+                        <div class="content-file">
+                            <a href="javascript:;" class="blue-common-btn arr-common-btn upload-btn">BROWSE...<input type="file"/></a>
+                            <select class="choose-file">
+                                <option>Default Image</option>
+                                <option>No Image</option>
+                                <option>Sample Video</option>
+                            </select>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="layer-close">layer close</a>
+                </div>
+            </div>
+            <div class="layer layer-choose-model" style="display:none;">
+                <div class="layer-dimmed"></div>
+                <div class="layer-inner-wrap">
+                    <h3>Choose display to be configurator</h3>
+                    <div class="layer-content">
+                        <div class="choose-model-detail">
+                            <img src="https://vd-dsg.s3.amazonaws.com/logs/upload/010603/1539335650100_m_IF012J_001_R-Perspective_Black.jpg" />
+                            <p class="choose-model-title"><span>Indoor</span><a href="javascript:;">IF012J</a></p>
+                            <dl>
+                                <dt>Brightness</dt>
+                                <dd>1,200 nit / 600 nit</dd>
+                                <dt>Dimension</dt>
+                                <dd>806.4x453.6x76.7mm</dd>
+                                <dt>Refresh rate</dt>
+                                <dd>3,840 Hz</dd>
+                                <dt>Color Temperature</dt>
+                                <dd>6,500K</dd>
+                                <dt>LED Lifetime</dt>
+                                <dd>100,000 hours</dd>
+                            </dl>
+                            <div class="common-btn-area">
+                                <a href="javascript:;" class="blue-common-btn arr-common-btn">CHOOSE THIS MODEL</a>
                             </div>
                         </div>
-                        <a href="javascript:;" class="layer-close">layer close</a>
+                        <div class="choose-model-list">
+                            <ul class="tab-btn">
+                                <li class="active"><a href="javascript:;">INDOOR</a></li>
+                                <li><a href="javascript:;">OUTDOOR</a></li>
+                                <li><a href="javascript:;">THEWALL</a></li>
+                            </ul>
+                            <div class="tab-con">
+                                <table>
+                                    <tr>
+                                        <th>Model Name</th>
+                                        <th>Brightness</th>
+                                        <th>Dimensions</th>
+                                        <th>Refresh rate</th>
+                                    </tr>
+                                    <tr><!-- tab 바뀔때마다 데이터 바꿔줌-->
+                                        <td>IF012J</td>
+                                        <td>1,200 nit / 600 nit</td>
+                                        <td>806.4x453.6x76.7mm</td>
+                                        <td>3,840 Hz</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+                    <a href="javascript:;" class="layer-close">layer close</a>
                 </div>
+            </div>
         </main>
     </body>
 </html>

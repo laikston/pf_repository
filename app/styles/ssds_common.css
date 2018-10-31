@@ -18,13 +18,13 @@
     font-style:normal;
 }
 
-a[class*="-common-btn"]{display:inline-block;font-family:'SamsungOneRg' !important;height:42px;font-size:17px;text-transform:uppercase;line-height:1;background:#fff;padding:11px 10px;text-align: center;}
+a[class*="-common-btn"]{display:inline-block;font-family:'SamsungOneRg' !important;height:42px;font-size:15px;text-transform:uppercase;line-height:1;background:#fff;padding:11px 10px;text-align: center;}
 a[class*="-common-btn"] span{display:inline-block;vertical-align:top;}
 .common-btn-area{display:table;width:100%;}
 .common-btn-area a[class*="-common-btn"]{display:table-cell;text-align:center;vertical-align:middle;}
 .blue-common-btn{color:#4774cf !important;border:2px solid #4774cf;}
 .pink-common-btn{color:#f48fb1 !important;border:2px solid #f48fb1;}
-.big-common-btn{height:50px;padding:15px 25px 0;}
+.big-common-btn{height:50px;padding:15px 25px 0;font-size:17px !important;}
 .arr-common-btn:after{content:'';display:inline-block;width:5px;height:12px;margin-left:5px;}
 .blue-common-btn.arr-common-btn:after{background:url('../images/ssds_configurator/btn_m_arrow1.gif') no-repeat 0 center;}
 .pink-common-btn.arr-common-btn:after{background:url('../images/ssds_configurator/btn_l_arrow4_off.gif') no-repeat 0 center;}
@@ -43,6 +43,11 @@ dl.input-count-group dd .count-btn a.down{background:url('../images/ssds_configu
 /* width resolution */
 .fix-width-1240{width:100%;max-width:1240px;margin:0 auto;}
 .fix-width-1200{width:100%;max-width:1200px;margin:0 auto;}
+
+/* upload btn, choose file select */
+a.upload-btn{position:relative;font-size:13px;padding:11px 12px 0;height:40px;}
+a.upload-btn input[type=file]{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;cursor: pointer;}
+select.choose-file{height:40px;padding:0 38px 0 20px;border:1px solid #666;background:#fff url('../images/ssds_configurator/set_fakeselect1.png') no-repeat right top;border-radius:3px;margin-left:10px;}
 
 /* layer common */
 .layer{position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;}

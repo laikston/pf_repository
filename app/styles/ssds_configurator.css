@@ -61,23 +61,24 @@
 .option-tab-area .option-conts .option-con.display-option-con li.display-layout-con .resolution-btn a:first-child{margin-left:0;}
 .option-tab-area .option-conts .option-con.content-option-con{display:none;position:relative;}
 .option-tab-area .option-conts .option-con.content-option-con li{overflow:hidden;}
-.option-tab-area .option-conts .option-con.content-option-con .upload-btn{position:relative;font-size:13px;padding:11px 12px 0;height:40px;float:left;}
-.option-tab-area .option-conts .option-con.content-option-con .upload-btn input[type=file]{position:absolute;left:0;top:0;width:92px;height:32px;opacity:0;cursor: pointer;}
-.option-tab-area .option-conts .option-con select{height:40px;padding:0 38px 0 20px;border:1px solid #666;background:#fff url('../images/ssds_configurator/set_fakeselect1.png') no-repeat right top;border-radius:3px;margin-left:10px;}
 .option-tab-area .option-conts .option-con.content-option-con .desc{vertical-align:top;display:inline-block;margin:5px 0 0 5px;}
 
 .wall-display-area{background:#ebedf0;}
 .wall-display-area .wall-display-area-inner{padding-bottom:100px;}
-.wall-display-area .pdf-area{position:relative;padding:40px 0 0 0;width:1020px;margin:0 auto;}
-.wall-display-area .pdf-area .wall-area{position:relative;width:692px;margin:0 auto;padding-bottom:70px;background:url('../images/ssds_configurator/bg_img_monitor_bar.png') no-repeat center bottom;}
-.wall-display-area .pdf-area .wall-area .wall{position:relative;width:100%;height:410px;border:2px solid #000;background:#fff;}
+.wall-display-area .pdf-area{position:relative;padding:40px 0 70px 0;width:1020px;margin:0 auto;background:url('../images/ssds_configurator/bg_img_monitor_bar.png') no-repeat center bottom;}
+.wall-display-area .pdf-area .wall-area{position:relative;width:692px;margin:0 auto;background:#fff;}
+.wall-display-area .pdf-area .wall-area .wall{position:relative;width:100%;height:410px;border:2px solid #000;z-index:10;}
 .wall-display-area .pdf-area .person-area{position:absolute;bottom:-10px;}
-.wall-display-area .pdf-area .menu-area{position:absolute;left:-45px;top:50%;}
-.wall-display-area .pdf-area .menu-area li{width:38px;height:38px;margin:5px 0 0;background:#434655;}
+.wall-display-area .pdf-area .menu-area{position:absolute;left:-55px;top:50%;margin-top:-40px;}
+.wall-display-area .pdf-area .menu-area li{position:relative;width:38px;height:38px;margin:2px 0 0;background:#434655;}
+.wall-display-area .pdf-area .menu-area li .menu-tooltip{position:absolute;display:none;font-size:10px;color:#cacaca;padding:5px 0;background:#434655;text-align:center;width:85px;left:-100px;top:50%;margin-top:-10px;line-height:1;}
+.wall-display-area .pdf-area .menu-area li .menu-tooltip:after{content:'';position:absolute;width:0;height:0;right:-3px;top:7px;border-top:3px solid transparent;border-bottom:3px solid transparent;border-left:3px solid #434655;}
 .wall-display-area .pdf-area .menu-area li:first-child{margin-top:0;}
+.wall-display-area .pdf-area .menu-area li a{display:block;width:100%;height:100%;background:url('../images/ssds_configurator/btn_model.png') no-repeat 0 0;}
+.wall-display-area .pdf-area .menu-area li:first-child a{background:url('../images/ssds_configurator/btn_orientation.png') no-repeat 0 0;}
+.wall-display-area .pdf-area .menu-area li:last-child a{background:url('../images/ssds_configurator/btn_upload_content.png') no-repeat 0 0;}
 .wall-display-area .pdf-area .menu-area li:hover{background:#5d7ecb;}
-.wall-display-area .pdf-area .menu-area li a{display:block;width:100%;height:100%;background:url('../images/ssds_configurator/btn_upload_content.png') no-repeat 0 0;}
-.wall-display-area .pdf-area .menu-area li:first-child a{background:url('../images/ssds_configurator/btn_model.png') no-repeat 0 0;}
+.wall-display-area .pdf-area .menu-area li:hover .menu-tooltip{display:block;}
 
 .wall-display-area .pdf-area .control-btns li{width:36px;height:36px;margin:5px 0 0;border-radius:100%;overflow:hidden;background:#fff;}
 .wall-display-area .pdf-area .control-btns li:first-child{margin:0;}
@@ -92,12 +93,15 @@
 .wall-display-area .pdf-area .h-count-area li{float:left;margin:0 5px;}
 .wall-display-area .pdf-area .h-count-area li:first-child{margin:0;}
 
-.wall-display-area .pdf-area .display-area{position:absolute;left:234.362px;top:174.821px;width:220.27px;height:61.95px;border:solid 1px #000;overflow:hidden;background:#fff;z-index:1;}
+.wall-display-area .pdf-area .display-area{position:absolute;left:234.362px;top:174.821px;width:220px;height:61.95px;border:solid 1px #000;overflow:hidden;background:#fff;z-index:1;}
+.wall-display-area .pdf-area .display-area svg{position:absolute;top:0;left:0;}
+.wall-display-area .pdf-area .display-area .display-bg{position:absolute;top:0;left:0;width:100%;height:100%;background:url('../images/ssds_configurator/background2.png') no-repeat;background-size:100% 100%;}
+.wall-display-area .pdf-area .display-area .display-movie video{width:auto;height:auto;transform-origin:0% 0%;}
 .wall-display-area .pdf-area .model-tag{position:absolute;padding:5px 10px;background:#6a6a6a;color:#fff;right:0;top:0;}
 .wall-display-area .pdf-area .measure-line{position:absolute;}
 .wall-display-area .pdf-area .tag-area{position:absolute;}
 .wall-display-area .pdf-area .tag-area span{position:relative;color:#fff;background:#000;padding:5px 10px;display:block;}
-.wall-display-area .pdf-area .h-measure-tag-area{position:absolute;top:235px;left:0;width:100%;height:265px;}
+.wall-display-area .pdf-area .h-measure-tag-area{position:absolute;top:235px;left:0;width:100%;height:265px;z-index:9;}
 .wall-display-area .pdf-area .h-measure-tag-area .h-wall-measure-line{bottom:0;width:238px;height:90.94px;border-bottom:2px solid #9ea0a6;}
 .wall-display-area .pdf-area .h-measure-tag-area .h-wall-measure-line:before{content:'';position:absolute;display:block;width:2px;height:15px;background: #9ea0a6;bottom:-8px;}
 .wall-display-area .pdf-area .h-measure-tag-area .h-wall-measure-left{left:0;border-left:2px dotted #9ea0a6;}
@@ -109,7 +113,7 @@
 .wall-display-area .pdf-area .h-measure-tag-area .h-display-measure:after{content:'';position:absolute;display:block;width:2px;height:15px;background: #000;bottom:-8px;right:-2px;}
 .wall-display-area .pdf-area .h-measure-tag-area .tag-area{position:absolute;bottom:-40px;left:50%;margin-left:-32px;}
 
-.wall-display-area .pdf-area .v-measure-tag-area{position:absolute;top:0;left:456px;width:295.865px;height:410px;}
+.wall-display-area .pdf-area .v-measure-tag-area{position:absolute;top:0;left:456px;width:295.865px;height:410px;z-index:9;}
 .wall-display-area .pdf-area .v-measure-tag-area .v-wall-measure-line{right:0;width:59.991px;height:174.03px;border-right:2px solid #9ea0a6;}
 .wall-display-area .pdf-area .v-measure-tag-area .v-wall-measure-top{top:0;border-top:2px dotted #9ea0a6;}
 .wall-display-area .pdf-area .v-measure-tag-area .v-wall-measure-top:before{content:'';position:absolute;height:2px;width:15px;right:-9px;top:-2px;background:#9ea0a6;}
@@ -165,3 +169,9 @@
 .layer-choose-model .choose-model-list .tab-con table th, .layer-choose-model .choose-model-list .tab-con table td{padding:15px 0;width:25%;text-align:center;}
 .layer-choose-model .choose-model-list .tab-con table th{background:#f1f5f9;border-bottom:1px solid #e1e1e1;}
 
+.layer-upload-content .layer-inner-wrap{width:450px;}
+.layer-upload-content .layer-content dl{font-size:17px;overflow:hidden;}
+.layer-upload-content .layer-content dt{position:relative;color:#222;float:left;padding-right:5px;}
+.layer-upload-content .layer-content dt:after{content:':';display:inline-block;margin-left:5px;}
+.layer-upload-content .layer-content .content-file{position:relative;font-size:0;text-align:center;margin-top:30px;}
+.layer-upload-content .layer-content .content-file a.upload-btn{width:150px;height:42px;font-size:15px;}

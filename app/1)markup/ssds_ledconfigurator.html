@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../styles/base.css">
         <link rel="stylesheet" href="../styles/ssds_common.css">
         <link rel="stylesheet" href="../styles/ssds_configurator.css">
+        <link rel="stylesheet" href="../styles/ssds_ledconfigurator.css">
     </head>
     <body>
         <main>
@@ -15,7 +16,7 @@
                 <div class="area-inner-box-1400">
                     <div class="title-wrap">
                         <h1>LED Configurator</h1>
-                        <a href="javascript:;" class="blue-common-btn need-help-step-btn">need help ?</a>
+                        <a href="javascript:;" class="blue-common-btn need-help-step-btn big-common-btn">need help ?</a>
                     </div>
                 </div>
                 <div class="need-help-step" style="display:none;">
@@ -62,7 +63,6 @@
                 </div>
                 <div class="option-conts">
                     <div class="area-inner-box-960">
-                        <a href="javascript:;" class="blue-common-btn fit-btn"><span>FIT TO WALL</span></a>
                         <div class="option-con room-option-con">
                             <ul>
                                 <li>
@@ -139,7 +139,7 @@
                             <ul>
                                 <li>
                                     <a href="javascript:;" class="blue-common-btn arr-common-btn upload-btn">BROWSE…<input type="file"/></a>
-                                    <select>
+                                    <select class="choose-file">
                                         <option>Default Image</option>
                                         <option>No Image</option>
                                         <option>Sample Video</option>
@@ -148,6 +148,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <a href="javascript:;" class="blue-common-btn fit-btn"><span>FIT TO ROOM</span></a>
                     </div>
                 </div>
             </div>
@@ -175,6 +176,12 @@
                                         </ul>
                                     </div>
                                 <div class="display-area">
+                                    <div class="display-bg"></div>
+                                    <div class="display-bg display-movie">
+                                        <video autoplay="" loop="" muted="" style="transform:scale(0.34, 0.17);" src=""><!-- ../images/ssds_configurator/big_buck_bunny.mp4 -->
+                                            <source src="" type="video/mp4">
+                                        </video>
+                                    </div>
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" width="220.27" height="61.95">
                                         <path id="col-line" ng-d="M110.63807999999999,0 L110.63807999999999,59.9573248 " style="stroke:#a1a1a1; fill:none; stroke-opacity:0.6;" d="M110.63807999999999,0 L110.63807999999999,59.9573248 "></path>
                                         <path id="row-line" ng-d="" style="stroke:#a1a1a1; fill:none; stroke-opacity:0.6;" d=""></path>
@@ -281,6 +288,29 @@
             <div class="layer-inner-wrap">
                 <h3>You need to log in to export</h3>
                 <div class="layer-content"></div>
+                <a href="javascript:;" class="layer-close">layer close</a>
+            </div>
+        </div>
+        <div class="layer layer-upload-content" style="display:none;">
+            <div class="layer-dimmed"></div>
+            <div class="layer-inner-wrap">
+                <h3>Content Configuration</h3>
+                <div class="layer-content">
+                    <dl>
+                        <dt>IMAGE</dt>
+                        <dd>jpg or png only, max 3mb</dd>
+                        <dt>VIDEO</dt>
+                        <dd>mp4 only, max 15mb</dd>
+                    </dl>
+                    <div class="content-file">
+                        <a href="javascript:;" class="blue-common-btn arr-common-btn upload-btn">BROWSE...<input type="file"/></a>
+                        <select class="choose-file">
+                            <option>Default Image</option>
+                            <option>No Image</option>
+                            <option>Sample Video</option>
+                        </select>
+                    </div>
+                </div>
                 <a href="javascript:;" class="layer-close">layer close</a>
             </div>
         </div>

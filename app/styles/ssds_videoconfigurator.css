@@ -2,3 +2,17 @@
 .option-tab-area .option-tab .option-tab-btn-wide{width:620px;}
 .option-tab-area .option-tab .option-tab-btn-wide ul{width:552px;}
 .option-tab-area .option-tab .option-tab-btn.display-tab-btn li:last-child a{background:url('../images/ssds_configurator/icon_configurator04.gif') no-repeat top center;}
+.wall-display-area .pdf-area{padding:0;background:none;}
+.wall-display-area .pdf-area .person-area{bottom:80px;right:165px;}
+.wall-display-area .pdf-area .wall-area{border-left:164px solid #dddfe4;border-right:164px solid #dddfe4;border-top:164px solid #f3f4f5;border-bottom:164px solid #cdd0d7;padding-bottom:0;width:1020px;background:url('../images/ssds_configurator/bg_wall.jpg') repeat-y;}
+.wall-display-area .pdf-area .wall-area .wall{border:none;}
+.wall-display-area .pdf-area .menu-area{margin-top:-59px;}
+.wall-display-area .wall-display-area-inner{padding-bottom:50px;}
+.wall-display-area .pdf-area .h-count-area{bottom:auto;top:-45px;}
+.wall-display-area .pdf-area .h-measure-tag-area{top:0;height:230px;}
+.wall-display-area .pdf-area .h-measure-tag-area .h-wall-measure-line{border-bottom:none;border-top:2px solid #9ea0a6;bottom:auto;top:-55px;height:55px;}
+.wall-display-area .pdf-area .h-measure-tag-area .h-wall-measure-line:before{bottom:auto;top:-8px;}
+.wall-display-area .pdf-area .h-measure-tag-area .tag-area{bottom:auto;top:-40px;}
+.wall-display-area .pdf-area .h-measure-tag-area .h-display-measure{border-bottom:none;border-top:2px solid #000;top:-55px;}
+.wall-display-area .pdf-area .h-measure-tag-area .h-display-measure:before, .wall-display-area .pdf-area .h-measure-tag-area .h-display-measure:after{bottom:auto;top:-8px;}
+.wall-display-area .pdf-area .display-area .display-bg{background:url('../images/ssds_configurator/background.gif') no-repeat;background-size:100% 100%;}
