@@ -1,0 +1,223 @@
+	<section class="container" ng-controller="bookerController">
+		<h1 class="head">예약 내역</h1>
+		<!--  -->
+		<div class="table vaT">
+			<table>
+				<colgroup>
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">피팅 구분</th>
+						<th scope="col">일자</th>
+						<th scope="col">피팅 장소</th>
+						<th scope="col">담당 피터</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<a href="#" class="btnPick">타이틀리스트 피팅 데이</a>
+						</td>
+						<td>
+							<a href="#" class="btnPick">YYYY.MM.DD</a>
+						</td>
+						<td>
+							<a href="#" class="btnPick">(성남)남서울제2연습장</a>
+							<input type="text" name="" id="" />
+						</td>
+						<td>
+							<a href="#" class="btnPick">홍길동</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- // -->
+
+		<!-- result -->
+		<div class="bookList">
+			<ul>
+				<li>
+					<a href="#">
+						<strong>
+							<span class="name">김순삼 (12:00)</span>
+							<span class="phone">010-1234-5678</span>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>
+							<span class="name">김순삼 (12:00)</span>
+							<span class="phone">010-1234-5678</span>
+						</strong>
+					</a>
+				</li>
+				<li class="info">
+					<a href="#">
+						<strong>
+							<span class="name">김순삼 (12:00)</span>
+							<span class="phone">010-1234-5678</span>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>
+							<span class="name">김순삼 (12:00)</span>
+							<span class="phone">010-1234-5678</span>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>
+							직접입력
+						</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //result -->
+
+		<!-- 골퍼 정보 -->
+		<section>
+			<div class="headWrap mt50">
+				<h1 class="head">골퍼 정보</h1>
+				<div class="right"><a href="#" class="btnText btnRightArr">지난 피팅 이력 보기</a></div>
+			</div>
+
+			<div class="golferInfo">
+				<div><input type="email" placeholder="이메일" title="이메일 입력" /></div>
+				<div><input type="text" placeholder="성명" title="성명 입력" /></div>
+				<div><input type="tel" placeholder="연락처" title="연락처 입력" /></div>
+			</div>
+
+			<div class="mb30">
+				<h2 class="subHead">기본 정보</h2>
+				<div class="table vaT">
+					<table>
+						<colgroup>
+							<col style="width: 25%;">
+							<col style="width: 25%;">
+							<col style="width: 25%;">
+							<col style="width: 25%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">구력</th>
+								<th scope="col">평균 타수</th>
+								<th scope="col">평균 연습 횟수</th>
+								<th scope="col">타석</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div>10년</div>
+									<input type="text" name="" id="" />
+								</td>
+								<td>
+									<div>73-79타</div>
+									<a href="#" class="btnPick">평균타수</a>
+								</td>
+								<td>
+									<div>주 2-3회</div>
+									<a href="#" class="btnPick">평균 연습 횟수</a>
+								</td>
+								<td>
+									<div>오른손 골퍼</div>
+									<a href="#" class="btnPick">타석</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div>
+				<h2 class="subHead">마이백 정보</h2>
+				<div class="table vaT">
+					<table>
+						<colgroup>
+							<col span="6" style="width: 14.3%;">
+							<col style="width: 9.8%;">
+							<col style="width: *;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="colgroup" colspan="3">클럽</th>
+								<th scope="colgroup" colspan="3">스펙</th>
+								<th scope="col" rowspan="2">피팅여부</th>
+								<th scope="col" rowspan="2">삭제</th>
+							</tr>
+							<tr>
+								<th scope="col" class="subTH">제품구분</th>
+								<th scope="col" class="subTH">브랜드</th>
+								<th scope="col" class="subTH">모델명</th>
+								<th scope="col" class="subTH">로프트</th>
+								<th scope="col" class="subTH">샤프트</th>
+								<th scope="col" class="subTH">플렉스</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div>드라이버</div>
+									<a href="#" class="btnPick">제품구분</a>
+								</td>
+								<td>
+									<div>타이틀리스트</div>
+									<a href="#" class="btnPick">브랜드</a>
+								</td>
+								<td>
+									<div>Titleist 917 D3</div>
+									<a href="#" class="btnPick">모델명</a>
+									<input type="text" name="" id="" />
+								</td>
+								<td>
+									<div>10.5</div>
+									<input type="text" name="" id="" />
+								</td>
+								<td>
+									<div>CUSTOM R</div>
+									<input type="text" name="" id="" />
+								</td>
+								<td>
+									<div>S</div>
+									<input type="text" name="" id="" />
+								</td>
+								<td>
+									<div>Y</div>
+									<a href="#" class="btnPick">Y</a>
+								</td>
+								<td>
+									<a href="#" class="btnDel"><img src="assets/images/btn_del.gif" alt="삭제" /></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="addInfo">
+				<div class="left">
+					<label class="checkboxStyle">
+						<input type="checkbox" name="" id="">
+						<span class="icon"></span>
+						개인정보의 마케팅 목적 수집 · 이용에 관한 동의
+					</label>
+				</div>
+				<div class="right"><a href="#" class="btnText btnAdd">추가 입력</a></div>
+			</div>
+		</section>
+		<!-- //골퍼 정보 -->
+
+		<div class="formFooter">
+			<button class="btnDefault btnRed">Next</button>
+		</div>
+	</section>

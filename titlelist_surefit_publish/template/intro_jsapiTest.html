@@ -1,0 +1,174 @@
+<div ng-controller="introController">
+	intro
+	<style>
+	ul{margin:0;}
+	
+	.sureFitflickPicker{position:relative;border:1px solid #000;margin-top:20px;padding:10px 0;}
+	.sureFitflickPicker.mainPicker{border:1px solid red;}
+	.sureFitflickPicker.subPicker{border:1px solid blue;}
+	.sureFitflickPicker-wrap{position:relative;overflow:hidden;height:34px;border:1px solid #efefef;}
+	.sureFitflickPicker ul{position:absolute;top:0;width:90%;}
+	.sureFitflickPicker ul li{list-style:none;height:30px;padding-top:4px;width:100%;}
+	.sureFitflickPicker ul li.active{font-weight:bold;}
+	</style>
+	
+	<div id="inner-content-div">
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p>
+		<p>Lorem ipsum dolor sit amet, consectetur .... snip</p> 
+	</div>
+	<h2>CLUB</h2>
+	<div id="club-category" class="sureFitflickPicker mainPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none" >none</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="club-hand" class="sureFitflickPicker"><!-- // no picker -->
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li>RH</li>
+				<li>LH</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="club-model" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="club-loft" class="sureFitflickPicker"><!-- // no picker -->
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	
+	<h2>SHAFT&GRIP</h2>
+	<div id="shaft-brand" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="shaft-model" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	<div id="shaft-flex" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	<div id="shaft-length" class="sureFitflickPicker"><!-- // no picker -->
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	
+	
+	<!-- 
+	<h2>CLUB</h2>
+	<div id="club-category" class="sureFitflickPicker mainPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+				<li data-value="category" ng-repeat="category in club.category">{{category}}</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="club-hand" class="sureFitflickPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li>RH</li>
+				<li>LH</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="club-model" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+				<li data-value="model" ng-repeat="model in club.model">{{model}}</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="club-loft" class="sureFitflickPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	
+	<h2>SHAFT&GRIP</h2>
+	<div id="shaft-brand" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+				<li data-value="brand" ng-repeat="brand in shaft.brand">{{brand}}</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="shaft-model" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+				<li data-value="model" ng-repeat="model in shaft.model">{{model}}</li>
+			</ul>
+		</div>
+	</div>
+	<div id="shaft-flex" class="sureFitflickPicker subPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+				<li data-value="flex" ng-repeat="flex in shaft.flex">{{flex}}</li>
+			</ul>
+		</div>
+	</div>
+	<div id="shaft-length" class="sureFitflickPicker">
+		<div class="sureFitflickPicker-wrap">
+			<ul>
+				<li data-value="none">none</li>
+			</ul>
+		</div>
+	</div>
+	 -->
+	
+	
+</div>

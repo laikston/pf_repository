@@ -1,0 +1,311 @@
+<!DOCTYPE>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title> 슈어핏 </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		.bs-callout {padding: 20px; margin: 20px 0; border: 1px solid #eee; border-left-width: 5px; border-radius: 3px}
+		.bs-callout .tit {display:block; margin-top: 0; margin-bottom: 5px}
+		.bs-callout p:last-child {margin-bottom: 0}
+		.bs-callout code {border-radius: 3px}
+		.bs-callout + .bs-callout {margin-top: -5px}
+		.bs-callout-danger {border-left-color: #ce4844}
+		.bs-callout-danger .tit {color: #ce4844}
+		.bs-callout-warning {border-left-color: #aa6708}
+		.bs-callout-warning .tit {color: #aa6708}
+		.bs-callout-info {border-left-color: #1b809e}
+		.bs-callout-info .tit {color: #1b809e}
+		.bs-callout ul {margin:0 0 10px;}
+		.bs-callout ul:last-child {margin-bottom:0;}
+
+		.prog-wrap {position:relative; padding-left:50px;}
+		.prog-wrap .head {display:block; position:absolute; left:0; width:50px; padding-right:8px; text-align:right;}
+		.prog-wrap .progress {margin-bottom:10px;}
+		.progress-bar > span {position:absolute; left:60px; text-shadow:1px 1px 0 #333;}
+		@media (max-width: 767px) {
+			.prog-container {margin-top:20px;}
+		}
+
+		.links {font-size:16px;}
+
+		.table .complete {text-align:center;}
+		.table ul {padding-left:1.5em;}
+		.table ul li {margin-top:5px;}
+		.table ul li:first-child {margin-top:0;}
+		.table .complete {font-weight:bold; font-size:18px; font-family:"Malgun Gothic", "맑은고딕", "Dotum", "돋움", serif;}
+		.red {color:#ce4844;}
+		.taC {text-align:center;}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var total = $('.table .complete').length;
+			$('.total-page').html(total);
+
+			var clear = $('.table .complete.text-success').length;
+			$('.success').html(clear);
+			var per = (clear / total * 100).toFixed(2);
+			$('.progress-bar-success').css('width', per + '%');
+			$('.successP').html(per);
+
+			var ing = $('.table .complete.text-warning').length;
+			$('.warning').html(ing);
+			var per2 = (ing / total * 100).toFixed(2);
+			$('.progress-bar-warning').css('width', per2 + '%');
+			$('.warningP').html(per2);
+
+			$('.total').html(clear + ing);
+			$('.totalP').html((per*1 + per2*1).toFixed(2));
+			$('.progress-total').css('width', (per*1 + per2*1).toFixed(2) + '%');
+		});
+	</script>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="page-header">
+		<h1 class="tit">슈어핏 APP</h1>
+	</div>
+
+	<div class="bs-callout bs-callout-info">
+		<div class="row">
+			<div class="info col-sm-6 col-md-8">
+				<strong class="tit">2017-04-18</strong>
+				<ul>
+					<li>picker sheet는 아래 html 참조<br />
+						- 1칸 : <a href="html/select_panel_col1.html" target="_blank">select_panel_col1.html</a><br />
+						- 2칸 : <a href="html/select_panel_col2.html" target="_blank">select_panel_col2.html</a><br />
+						- 4칸 : <a href="html/select_panel_col4.html" target="_blank">select_panel_col4.html</a>
+					</li>
+				</ul>
+
+				<strong class="tit">2017-04-19</strong>
+				<ul>
+					<li><b>[아쿠쉬네트] 퍼블리싱 확인 및 문의.doct</b> 내용반영</li>
+				</ul>
+
+				<strong class="tit">2017-04-20</strong>
+				<ul>
+					<li><b>피팅 클럽 정보 입력</b> 페이지 분리</li>
+				</ul>
+			</div>
+
+			<div class="prog-container col-sm-6 col-md-4">
+				<div class="prog-wrap">
+					<strong class="head">완료</strong>
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar">
+							<span>
+								<span class="success"></span> / <span class="total-page"></span> (<span class="successP"></span>%)
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="prog-wrap">
+					<strong class="head">진행중</strong>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar">
+							<span>
+								<span class="warning"></span> / <span class="total-page"></span> (<span class="warningP"></span>%)
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="prog-wrap">
+					<strong class="head">합계</strong>
+					<div class="progress">
+						<div class="progress-bar progress-total" role="progressbar">
+							<span>
+								<span class="total"></span> / <span class="total-page"></span> (<span class="totalP"></span>%)
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<colgroup>
+				<col style="width: 10%;" />
+				<col style="width: 15%;" />
+				<col style="width: 15%;" />
+				<col style="width: 20%;" />
+				<col style="width: 10%;" />
+				<col style="width: *%;" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1 Depth</th>
+					<th>2 Depth</th>
+					<th>3 Depth</th>
+					<th>page name</th>
+					<th>진행 상황</th>
+					<th>기타</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Intro&amp;Main</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/main.html" target="_blank">main.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">Step1</td>
+					<td>피팅 기본 정보 입력 (장소/ 골퍼/ 피터) - 예약자</td>
+					<td></td>
+					<td><a href="html/step1_booker.html" target="_blank">step1_booker.html</a></td>
+					<td class="complete text-warning">●</td>
+					<td>
+						<ul>
+							<li>picker type1</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">피팅 기본 정보 입력 (장소/ 골퍼/ 피터) - 비예약자</td>
+					<td></td>
+					<td><a href="html/step1_non_booker.html" target="_blank">step1_non_booker.html</a></td>
+					<td class="complete text-warning">●</td>
+					<td>
+						<ul>
+							<li>picker type1</li>
+							<li><strong class="red">2017-04-19 수정</strong></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>신규회원약관동의</td>
+					<td><a href="html/step1_non_booker_pop.html" target="_blank">step1_non_booker_pop.html</a></td>
+					<td class="complete text-success">●</td>
+					<td>
+						<ul>
+							<li><strong class="red">2017-04-19 수정</strong></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Step2</td>
+					<td>트랙맨 데이터 입력(데이터 연동)</td>
+					<td></td>
+					<td><a href="html/step2_trackman.html" target="_blank">step2_trackman.html</a></td>
+					<td class="complete text-warning">●</td>
+					<td>
+						<ul>
+							<li>picker type1</li>
+							<li><strong class="red">2017-04-19 수정</strong></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="4">Step3</td>
+					<td rowspan="4">피팅 클럽 정보 입력</td>
+					<td>type1 (드라이버,페어웨이)</td>
+					<td><a href="html/step3_fitting_info_df.html" target="_blank">step3_fitting_info_df.html</a></td>
+					<td class="complete text-warning">●</td>
+					<td>
+						<ul>
+							<li>picker type1<br> picker type2</li>
+							<li><strong class="red">2017-04-19 수정</strong></li>
+							<li><strong class="red">2017-04-20 분리</strong></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>type1 (하이브리드)</td>
+					<td><a href="html/step3_fitting_info_h.html" target="_blank">step3_fitting_info_h.html</a></td>
+					<td class="complete text-warning">●</td>
+					<td>
+						<ul>
+							<li>picker type1<br> picker type2</li>
+							<li><strong class="red">2017-04-19 분리</strong></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>type2 (아이언)</td>
+					<td><a href="html/step3_fitting_info_i.html" target="_blank">step3_fitting_info_i.html</a></td>
+					<td class="complete text-warning">●</td>
+					<td>
+						<ul>
+							<li>picker type1<br> picker type2</li>
+							<li><strong class="red">2017-04-19 수정</strong></li>
+							<li><strong class="red">2017-04-20 분리</strong></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>type2 (웨지)</td>
+					<td><a href="html/step3_fitting_info_w.html" target="_blank">step3_fitting_info_w.html</a></td>
+					<td class="complete text-warning">●</td>
+					<td>
+						<ul>
+							<li>picker type1<br> picker type2</li>
+							<li><strong class="red">2017-04-20 분리</strong></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="4">Step4</td>
+					<td rowspan="4">피팅 결과</td>
+					<td></td>
+					<td><a href="html/step4_result.html" target="_blank">step4_result.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>결과 팝업</td>
+					<td><a href="html/step4_result_pop.html" target="_blank">step4_result_pop.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>피팅 스펙지 / 전송 페이지</td>
+					<td><a href="html/step4_result_spec.html" target="_blank">step4_result_spec.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>고객용 스펙지</td>
+					<td><a href="html/step4_result_print.html" target="_blank">step4_result_print.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Step5</td>
+					<td>동기화 화면</td>
+					<td></td>
+					<td><a href="html/sync.html" target="_blank">sync.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">기타</td>
+					<td>EMS</td>
+					<td></td>
+					<td><a href="edm/edm.html" target="_blank">edm.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Loading</td>
+					<td></td>
+					<td><a href="html/loading.html" target="_blank">loading.html</a></td>
+					<td class="complete text-success">●</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

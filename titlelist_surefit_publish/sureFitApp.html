@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title> 슈어핏 </title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+	<script src="assets/js/lib/jquery-1.11.3.min.js"></script>
+	<script src="assets/js/lib/angular1.2.min.js"></script>
+	<script src="assets/js/nativeInterface.js"></script>
+	<script src="assets/js/sureFitApp.js"></script>
+</head>
+
+<body ng-app="sureFitApp" ng-controller="sureFitAppController" ng-class="{'mask':picker.isOn}">
+	<header class="header" ng-class="{'sub':common.isSubPage}">
+		<div>
+			<div class="left" ng-show="common.isSubPage">
+				<a href="javascript:;" ng-click="">이전</a>
+			</div>
+			<div class="right">
+				<span class="mode" ng-class="{'online':common.isOnline === true}">{{common.isOnline == true ? '온' : '오프'}}라인모드</span>
+				<a href="#" class="sync">
+					<span class="hidden">동기화</span>
+					<span class="update" ng-show="common.isUpdate"><span class="hidden">업데이트</span></span>
+				</a>
+			</div>
+			<div class="logo" ng-show="common.isSubPage"><img src="assets/images/logo_top.png" alt="titleist"></div>
+		</div>
+	</header>
+	<ng-view></ng-view>
+	
+	<!-- popup -->
+	<section class="popupwrap ng-hide">
+		<div class="popup">
+			<h1 class="popH"> 개인정보의 마케팅 목적 수집·이용에 관한 동의</h1>
+
+			<div class="agreeBox">
+				<p class="leadText">아쿠쉬네트코리아 주식회사(“회사”)는 아래와 같이 귀하의 개인정보를 수집∙이용합니다.</p>
+				<dl>
+					<dt>1. 수집하는 개인정보의 항목</dt>
+					<dd>
+						성명, 성별, 생년월일, 전화번호, 이메일 주소, 주소<br>
+						핸디캡, 구력, 피팅 서비스, 방문경로, 직업분류, 피팅 결과 데이터<br>
+						골프정보 획득채널, 월 평균 라운딩 회수, 자주 찾는 골프장 및 골프연습장, 현재 사용하는 골프 볼, 클럽, 골프 볼 및 클럽 구매처 기타 귀하가 질문<br>
+						사항에 대한 답변으로 알려주신 귀하의 정보
+					</dd>
+					<dt>2. 개인정보의 수집∙이용 목적</dt>
+					<dd>
+						피팅 서비스 등 회사의 서비스, 프로모션 활동에 대한 유효성 평가, 고객 분석 및 맞춤형 고객 관리<br>
+						우편(전자우편 포함) 발송, 전화, SMS 발송 등을 통한 회사 제품 및 서비스 관련 정보 전달, 회사 이벤트∙세일∙프로모션에 관한 사항의 안내 및<br>
+						뉴스레터 전송 등 개인정보의 마케팅 목적 이용 및 영리목적 광고성 정보 전송
+					</dd>
+					<dt>3. 개인정보의 보유∙이용기간</dt>
+					<dd>
+						관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 정보 수집 시로부터 5년간 귀하의 개인정보를 보유 및 이용합니다.<br>
+						귀하는 위와 같은 개인정보의 수집 및 이용에 대해 동의하지 않을 수 있습니다. 다만, 동의하지 않을 경우 뉴스레터 등 제품 및 서비스 관련 정보 수령, 맞춤형 고객관리 서비스 제공이 어려울 수 있습니다.
+					</dd>
+				</dl>
+			</div>
+
+			<div class="mt15">
+				<label class="radioStyle">
+					<input type="radio" name="rdo1" id="" />
+					<span class="icon"></span>
+					개인정보의 마케팅 목적 이용 및 영리목적 광고성 정보 수신에 동의합니다
+				</label>
+				<label class="radioStyle">
+					<input type="radio" name="rdo1" id="" />
+					<span class="icon"></span>
+					동의하지 않습니다
+				</label>
+			</div>
+
+			<div class="popBtn">
+				<a href="#" class="btnDefault btnRed"><span class="btnKor">확인</span></a>
+			</div>
+		</div>
+	</section>
+	<!-- //popup -->
+	
+	<!-- loading -->
+	<div class="loading ng-hide">
+		<svg width="78" height="78" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#FFF" style="position:absolute;top:50%;left:50%;margin:-50px 0 0 -10px;">
+			<g fill="none" fill-rule="evenodd">
+				<g transform="translate(1 1)" stroke-width="2">
+					<circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle>
+					<path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(199.025 18 18)">
+						<animatetransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animatetransform>
+					</path>
+				</g>
+			</g>
+		</svg>
+	</div>
+	<!-- //loading -->
+	
+	<!-- keyboard type picker -->
+	<section class="pickPanel" ng-show='picker.isOn'>
+		<!-- head -->
+		<div class="pTop">
+			<div class="row">
+				<div class="col" data-value="{{title}}" ng-repeat="(idx, title) in picker.title" ng-style="{'width': (100 / picker.title.length) + '%'}">{{title}}</div>
+			</div>
+			<a href="javascript:;" class="btnDone" ng-click="closePicker();">Done</a>
+		</div>
+		<!-- //head -->
+
+		<!-- real picker -->
+		<div class="pSloats">
+			<div class="row">				
+				<div class="col" ng-repeat="(idx, col) in picker.option" ng-style="{'width': (100 / picker.title.length) + '%'}">
+					<div class="sloatBox">
+						<div class="sloatWrap">
+							<ul>
+								<li data-title="{{picker.title[idx]}}" data-value="{{option}}" ng-repeat="(i, option) in picker.option[idx]" keyboard-picker>{{option}}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- //real picker -->
+	</section>
+	<!-- // keyboard type picker -->
+	
+</body>
+</html>

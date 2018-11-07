@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Titleist SureFit picker_type1</title>
+		
+		<link rel="stylesheet" href="assets/css/style.css">
+		
+		<script src="assets/js/lib/jquery-1.11.3.min.js"></script>
+		<script src="assets/js/lib/angular1.2.min.js"></script>
+		<script src="assets/js/picker.js"></script>
+		
+		<style>
+		
+		.active{color:red;font-weight:bold;}
+		</style>
+	</head>
+	<body ng-app="testApp" ng-controller="testController">
+		<section>
+			
+			<div class="fittingInfo">
+				<!-- club -->
+				<div class="info">
+					<h2>club</h2>
+					<div class="brdBox"><!-- 다 안채웠을 때 error -->
+						<div class="row">
+							<div class="col">
+								<strong class="tit">category</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul>
+												<!-- <li data-value="select">select</li> -->
+												<li data-value="{{club}}" data-category="{{club}}" ng-repeat="(idx, club) in clubs" repeat-complete>{{club}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<div class="col">
+								<strong class="tit">RH/LH</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul>
+												<li data-value="{{hand}}" ng-repeat="hand in CONST_DATA.hand" ng-class="{'active':getActiveClass(hand)}">{{hand}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<strong class="tit">model</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul>
+												<li data-value="select">select</li>
+												<li data-value="{{model}}" data-club="{{category}}" ng-repeat="(idx, model) in getDependentOption(category, '.club.model')" repeat-complete>{{model}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<div class="col">
+								<strong class="tit">loft</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul>
+												<li data-value="none">select</li>
+												<li data-value="{{loft}}" ng-repeat="loft in CONST_DATA.loft">{{loft}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+					</div>
+					<!-- 
+					<dl class="selectInfo mt8">
+						<dt>surefit cg</dt>
+						<dd>
+							<a href="#" class="btnPick">
+								<span>10g</span>
+								<span>Neutral</span>
+							</a>
+						</dd>
+					</dl>
+					 -->
+				</div>
+				<!-- //club -->
+				
+				
+				
+	
+				<!-- setting -->
+				<!-- 
+				<div class="setting">
+					<div>
+						<div class="imgLoft"><img src="../assets/images/spec/img_loft.png" alt="loft" /></div>
+						<div class="imgLie"><img src="../assets/images/spec/img_lie.png" alt="lie" /></div>
+						
+						<ul>
+							<li class="r1 c1"><img src="../assets/images/spec/lh_driver_1.png" alt="+1.5" /></li>
+							<li class="r1 c2"><a href="#"><img src="../assets/images/spec/lh_driver_2_on.png" alt="C·1" /></a></li>
+							<li class="r1 c3"><a href="#"><img src="../assets/images/spec/lh_driver_3.png" alt="D·1" /></a></li>
+							<li class="r1 c4"><a href="#"><img src="../assets/images/spec/lh_driver_4.png" alt="C·2" /></a></li>
+							<li class="r1 c5"><a href="#"><img src="../assets/images/spec/lh_driver_5.png" alt="MOST D·2 DRAW" /></a></li>
+	
+							<li class="r2 c1"><img src="../assets/images/spec/lh_driver_6.png" alt="+0.75" /></li>
+							<li class="r2 c2"><a href="#"><img src="../assets/images/spec/lh_driver_7.png" alt="B·1" /></a></li>
+							<li class="r2 c3"><a href="#"><img src="../assets/images/spec/lh_driver_8.png" alt="A·1" /></a></li>
+							<li class="r2 c4"><a href="#"><img src="../assets/images/spec/lh_driver_9.png" alt="B·2" /></a></li>
+							<li class="r2 c5"><a href="#"><img src="../assets/images/spec/lh_driver_10.png" alt="A·2" /></a></li>
+	
+							<li class="r3 c1"><img src="../assets/images/spec/lh_driver_11.png" alt="STD LH LOFT" /></li>
+							<li class="r3 c2"><a href="#"><img src="../assets/images/spec/lh_driver_12.png" alt="C·4" /></a></li>
+							<li class="r3 c3"><a href="#"><img src="../assets/images/spec/lh_driver_13.png" alt="D·4" /></a></li>
+							<li class="r3 c4"><a href="#"><img src="../assets/images/spec/lh_driver_14.png" alt="C·3" /></a></li>
+							<li class="r3 c5"><a href="#"><img src="../assets/images/spec/lh_driver_15.png" alt="D·3" /></a></li>
+	
+							<li class="r4 c1"><img src="../assets/images/spec/lh_driver_16.png" alt="- .75" /></li>
+							<li class="r4 c2"><a href="#"><img src="../assets/images/spec/lh_driver_17.png" alt="MOST B·4 FADE" /></a></li>
+							<li class="r4 c3"><a href="#"><img src="../assets/images/spec/lh_driver_18.png" alt="A·4" /></a></li>
+							<li class="r4 c4"><a href="#"><img src="../assets/images/spec/lh_driver_19.png" alt="B·3" /></a></li>
+							<li class="r4 c5"><a href="#"><img src="../assets/images/spec/lh_driver_20.png" alt="A·3" /></a></li>
+	
+							<li class="r5 c1"><img src="../assets/images/spec/lh_driver_21.png" alt="LH" /></li>
+							<li class="r5 c2"><img src="../assets/images/spec/lh_driver_22.png" alt=".75 FLAT" /></li>
+							<li class="r5 c3"><img src="../assets/images/spec/lh_driver_23.png" alt="STD LH LIE" /></li>
+							<li class="r5 c4"><img src="../assets/images/spec/lh_driver_24.png" alt=".75 UPRIGHT" /></li>
+							<li class="r5 c5"><img src="../assets/images/spec/lh_driver_25.png" alt="1.5 UPRIGHT" /></li>
+						</ul>
+						
+						<ul>
+							<li class="r1 c1"><img src="../assets/images/spec/rh_driver_1.png" alt="" /></li>
+							<li class="r1 c2"><a href="#"><img src="../assets/images/spec/rh_driver_2.png" alt="" /></a></li>
+							<li class="r1 c3"><a href="#"><img src="../assets/images/spec/rh_driver_3.png" alt="" /></a></li>
+							<li class="r1 c4"><a href="#"><img src="../assets/images/spec/rh_driver_4.png" alt="" /></a></li>
+							<li class="r1 c5"><a href="#"><img src="../assets/images/spec/rh_driver_5.png" alt="" /></a></li>
+	
+							<li class="r2 c1"><img src="../assets/images/spec/rh_driver_6.png" alt="" /></li>
+							<li class="r2 c2"><a href="#"><img src="../assets/images/spec/rh_driver_7.png" alt="" /></a></li>
+							<li class="r2 c3"><a href="#"><img src="../assets/images/spec/rh_driver_8.png" alt="" /></a></li>
+							<li class="r2 c4"><a href="#"><img src="../assets/images/spec/rh_driver_9.png" alt="" /></a></li>
+							<li class="r2 c5"><a href="#"><img src="../assets/images/spec/rh_driver_10.png" alt="" /></a></li>
+	
+							<li class="r3 c1"><img src="../assets/images/spec/rh_driver_11.png" alt="" /></li>
+							<li class="r3 c2"><a href="#"><img src="../assets/images/spec/rh_driver_12.png" alt="" /></a></li>
+							<li class="r3 c3"><a href="#"><img src="../assets/images/spec/rh_driver_13.png" alt="" /></a></li>
+							<li class="r3 c4"><a href="#"><img src="../assets/images/spec/rh_driver_14.png" alt="" /></a></li>
+							<li class="r3 c5"><a href="#"><img src="../assets/images/spec/rh_driver_15.png" alt="" /></a></li>
+	
+							<li class="r4 c1"><img src="../assets/images/spec/rh_driver_16.png" alt="" /></li>
+							<li class="r4 c2"><a href="#"><img src="../assets/images/spec/rh_driver_17.png" alt="" /></a></li>
+							<li class="r4 c3"><a href="#"><img src="../assets/images/spec/rh_driver_18.png" alt="" /></a></li>
+							<li class="r4 c4"><a href="#"><img src="../assets/images/spec/rh_driver_19.png" alt="" /></a></li>
+							<li class="r4 c5"><a href="#"><img src="../assets/images/spec/rh_driver_20.png" alt="" /></a></li>
+	
+							<li class="r5 c1"><img src="../assets/images/spec/rh_driver_21.png" alt="" /></li>
+							<li class="r5 c2"><img src="../assets/images/spec/rh_driver_22.png" alt="" /></li>
+							<li class="r5 c3"><img src="../assets/images/spec/rh_driver_23.png" alt="" /></li>
+							<li class="r5 c4"><img src="../assets/images/spec/rh_driver_24.png" alt="" /></li>
+							<li class="r5 c5"><img src="../assets/images/spec/rh_driver_25.png" alt="" /></li>
+						</ul>
+						
+					</div>
+				</div>
+				-->
+				<!-- //setting -->
+	
+				<!-- shaft & grip -->
+				<div class="info">
+					<h2>SHAFT &amp; GRIP</h2>
+					<div class="brdBox">
+						<div class="row">
+							<div class="col">
+								<strong class="tit">brand</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul>
+												<li data-value="select">select</li>
+												<li data-value="{{brand}}" data-club="{{category}}" data-brand="{{brand}}" ng-repeat="(idx, brand) in getDependentOption(category, '.shaft.brand')" repeat-complete>{{brand}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<div class="col">
+								<strong class="tit">model</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul ng-repeat="(idx, brand) in getDependentOption(category, '.shaft.brand')" ng-show="brand == shaftBrand"  >
+												<li data-value="select">select</li>
+												<!-- <li data-value="{{model}}" data-club="{{category}}" ng-repeat="(idx, model) in getDependentOption(category, '.shaft.model')" repeat-complete>{{model}}</li>-->
+												<li data-value="{{model}}" data-club="{{category}}" ng-repeat="(i, model) in (getDependentOption(category, '.shaft.model')[brand])" repeat-complete>{{model}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<strong class="tit">flex</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul>
+												<li data-value="select">select</li>
+												<li data-value="{{flex}}" data-club="{{category}}" ng-repeat="(idx, flex) in getDependentOption(category, '.shaft.flex')" repeat-complete>{{flex}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<div class="col">
+								<strong class="tit">length</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<div class="picker-list-wrap">
+											<ul>
+												<li data-value="none">none</li>
+												<li data-value="{{length}}" ng-repeat="length in CONST_DATA.length">{{length}}</li>
+											</ul>
+										</div>
+										<div class="newline top"></div>
+										<div class="newline bottom"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+					</div>
+					<!-- 
+					<dl class="selectInfo mt8">
+						<dt>grips</dt>
+						<dd>
+							<a href="#" class="btnPick">
+								<span>Our Velvet 360</span>
+								<span>600Std</span>
+							</a>
+						</dd>
+					</dl>
+					 -->
+				</div>
+				<!-- //shaft & grip -->
+			</div>
+			
+			
+			
+			
+			
+			
+			<div class="fittingInfo">
+				<!-- club -->
+				<div class="info">
+					<h2>club</h2>
+					<div class="brdBox"><!-- 다 안채웠을 때 error -->
+						<div class="row">
+							<div class="col">
+								<strong class="tit">category</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>none</li>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<div class="col">
+								<strong class="tit">RH/LH</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<strong class="tit">model</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="pBox">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<!-- 2017-04-20 수정 -->
+							<div class="col double">
+								<strong class="tit">SET COMP</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<!-- //2017-04-20 수정 -->
+						</div>
+					</div>
+				</div>
+				<!-- //club -->
+	
+				<!-- spec -->
+				<div class="info spec">
+					<h2>spec</h2>
+					<div class="brdBox">
+						<div class="row">
+							<div class="col">
+								<strong class="tit">loft</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<strong class="tit">lie</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="pBox">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //spec -->
+	
+				<!-- shaft & grip -->
+				<div class="info">
+					<h2>SHAFT &amp; GRIP</h2>
+					<div class="brdBox">
+						<div class="row">
+							<div class="col">
+								<strong class="tit">brand</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<div class="col">
+								<strong class="tit">model</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<strong class="tit">flex</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="pBox">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+							<div class="col">
+								<strong class="tit">length</strong>
+								<!-- picker -->
+								<div class="picker">
+									<div class="box">
+										<ul>
+											<li>1</li>
+											<li>2</li>
+											<li>3</li>
+											<li>3</li>
+										</ul>
+										<div class="line"></div>
+									</div>
+								</div>
+								<!-- //picker -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //shaft & grip -->
+			</div>
+		</section>
+	</body>
+	
+</html>

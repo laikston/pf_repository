@@ -1,0 +1,199 @@
+	<section class="container" ng-controller="trmController">
+		<div class="dataCategory">
+			<dl class="selectInfo">
+				<dt>CATEGORY</dt>
+				<dd><a href="javascript:;" class="btnPick" ng-click="openPicker(['CATEGORY'], club.category, trackman.current.category)">{{trackman.current.category}}</a></dd>
+			</dl>
+			<div class="num">
+				<div># {{trackman.current.number}}</div>
+				<button class="btnDefault btnRed btnSmall" ng-click="saveTrackmanData()">저장</button>
+			</div>
+		</div>
+
+		<div class="trackmanData mt15">
+			<ul>
+				<li>
+					<dl class="tData">
+						<dt>Club Speed</dt>
+						<dd>
+							{{trackman.current.result.clubSpeed}}
+							<span class="unit">m/s</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Ball Speed</dt>
+						<dd>
+							{{trackman.current.result.ballSpeed}}
+							<span class="unit">m/s</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Launch Angle</dt>
+						<dd>
+							{{trackman.current.result.launchAngle}}
+							<span class="unit">deg</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Spin Rate</dt>
+						<dd>
+							{{trackman.current.result.spinRate}}
+							<span class="unit">rpm</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Smash Facter</dt>
+						<dd>
+							{{trackman.current.result.smashFactor}}
+							<span class="unit"></span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Club Path</dt>
+						<dd>
+							{{trackman.current.result.clubPath}}
+							<span class="unit">deg</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Face Angle</dt>
+						<dd>
+							{{trackman.current.result.faceAngle}}
+							<span class="unit">deg</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Face to Path</dt>
+						<dd>
+							{{trackman.current.result.faceToPath}}
+							<span class="unit">deg</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Attack Angle</dt>
+						<dd>
+							{{trackman.current.result.attackAngle}}
+							<span class="unit">deg</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Swing Plane</dt>
+						<dd>
+							{{trackman.current.result.swingPlane}}
+							<span class="unit">deg</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Landing Angle</dt>
+						<dd>
+							{{trackman.current.result.landingAngle}}
+							<span class="unit">deg</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="tData">
+						<dt>Carry</dt>
+						<dd>
+							{{trackman.current.result.carry}}
+							<span class="unit">{{trackman.current.unit == 'meter' ? 'm' : 'yds'}}</span>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+
+			<div class="total">
+				<dl class="tData">
+					<dt>Total</dt>
+					<dd>
+						{{trackman.current.result.total}}
+						<span class="unit">{{trackman.current.unit == 'meter' ? 'm' : 'yds'}}</span>
+					</dd>
+				</dl>
+			</div>
+
+			<a href="javascript:;" class="btnConvert" ng-click="changeTrackmanUnit(trackman.current.unit)">단위변환</a>
+		</div>
+
+		<div class="dataSelectWrap">
+			<ul>
+				<!-- 선택된 데이터의 li에 checked 클래스 추가 -->
+				<li ng-repeat="(listNum, obj) in trackman.list">
+					<div class="checkWrap">
+						<label class="radioStyle">
+							<span class="category">{{trackman.list[listNum].category}}</span>
+							<span class="txt"># {{trackman.list[listNum].number}}</span>
+							<input type="radio" name="rdo" id="" ng-click="selectTrackmanData(listNum)"/>
+							<span class="icon"></span>
+						</label>
+					</div>
+
+					<div class="savedData">
+						<table>
+							<colgroup>
+								<col span="13" style="width: 7.6923%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">Club<br> Speed<br> (㎧)</th>
+									<th scope="col">Ball<br> Speed<br> (㎧)</th>
+									<th scope="col">Launch<br> Angle<br> (deg)</th>
+									<th scope="col">Spin<br> Rate<br> (rpm)</th>
+									<th scope="col">Smash<br> Facter</th>
+									<th scope="col">Club<br> Path<br> (deg)</th>
+									<th scope="col">Face<br> Angle<br> (deg)</th>
+									<th scope="col">Face to<br> Path<br> (deg)</th>
+									<th scope="col">Attack<br> Angle<br> (deg)</th>
+									<th scope="col">Swing<br> Plane<br> (deg)</th>
+									<th scope="col">Landing<br> Angle<br> (deg)</th>
+									<th scope="col">Carry<br> ({{trackman.list[listNum].unit == 'meter' ? 'm' : 'yds'}})</th>
+									<th scope="col">Total<br> ({{trackman.list[listNum].unit == 'meter' ? 'm' : 'yds'}})</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>{{trackman.list[listNum].result.clubSpeed}}</td>
+									<td>{{trackman.list[listNum].result.ballSpeed}}</td>
+									<td>{{trackman.list[listNum].result.launchAngle}}</td>
+									<td>{{trackman.list[listNum].result.spinRate}}</td>
+									<td>{{trackman.list[listNum].result.smashFactor}}</td>
+									<td>{{trackman.list[listNum].result.clubPath}}</td>
+									<td>{{trackman.list[listNum].result.faceAngle}}</td>
+									<td>{{trackman.list[listNum].result.faceToPath}}</td>
+									<td>{{trackman.list[listNum].result.attackAngle}}</td>
+									<td>{{trackman.list[listNum].result.swingPlane}}</td>
+									<td>{{trackman.list[listNum].result.landingAngle}}</td>
+									<td>{{trackman.list[listNum].result.carry}}</td>
+									<td>{{trackman.list[listNum].result.total}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="formFooter">
+			<button class="btnDefault btnRed" ng-click="nextTrackmanData()">Next</button>
+		</div>
+	</section>

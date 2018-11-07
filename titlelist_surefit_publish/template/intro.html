@@ -1,0 +1,20 @@
+
+<section class="main" ng-controller="introController">
+	<div class="conts">
+		<div class="logos">
+			<div class="logoTitleist"><img src="assets/images/logo_titleist.png" alt="Titleist. BETTER FIT. BETTER GAME"></div>
+			<div class="logoSurefit"><img src="assets/images/logo_surefit.png" alt="SURE FIT"></div>
+		</div>
+		<div class="login">
+			<div class="loginInput" ng-show="common.isLogin"></div>
+			<form action="" >
+				<fieldset>
+					<input type="text" name="" id="" placeholder="피터 이메일을 입력해 주세요." title="피터 이메일 입력" ng-model="fitter.email" read>
+					<button class="btnDefault btnRed btnLogin" ng-click="loginFitter()">{{common.isLogin === true ? 'Logout' : 'Login' ;}}</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div class="copyright">©2017. Acushnet Korea Co.,Ltd. All Rights Reserved.</div>
+</section>

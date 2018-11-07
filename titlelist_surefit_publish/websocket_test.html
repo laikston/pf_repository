@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+  <meta charset="utf-8" />
+  <title>WebSocket Test</title>
+  <script language="javascript" type="text/javascript">
+
+  var wsUri = "ws://echo.websocket.org/"; // 서버(트랙맨) ip주소   ws://172.30.20.1/ws  
+  websocket = new WebSocket(wsUri);
+  websocket.onopen = function(evt) { // 서버(트랙맨) 연결
+	websocket.send('message'); // 서버(트랙맨)로 메세지 보내기
+  };
+  websocket.onclose = function(evt) { 
+	  
+  };
+  websocket.onmessage = function(evt) { // 서버(트랙맨)에서 메세지 받기
+	  console.log(evt.data);
+  };
+  websocket.onerror = function(evt) {
+	  
+  };
+  //websocket.close(); // 웹소켓 통신 끝내기
+  </script>
+
+  <h2>WebSocket Test</h2>
+  
+  <!--
+  
+	1)
+	웹소켓 연결
+	- 트랙맨 url   ws://172.30.20.1/ws
+	- ws://{device-­‐ip}:{port}/ws
+	
+	2)
+	연결되면 open 이벤트 발생시키지만 메세지는 리턴해 주지 않음
+	연결을 확인할려면	
+	- 서버에서 10초마다 {"Type": "Ping"}이 떨어짐 
+	- 클라이언트는 {"Type": "Pong"}을 일정 간격마다 보내줌(1분동안 답을 안하면 연결 끊어짐)
+	
+	
+	3)
+	서버로 데이터를 받을 수 있게
+	{
+		"Type": "Subscribe",
+		"Payload": {
+			"MessageList": [
+				"Measurement"
+			]
+		}
+	}
+	보내기
+	- 측정값만 필요하므로 "MessageList"의 "Measurement"이벤트만 받기
+	
+	
+	
+	4)
+	서버에서
+	{"Type": "Acknowledge", "SubType": "Subscribe"}
+	내려주면 데이터 받을 수 있음
+	
+	5)
+	볼을 치면 이벤트 "Type":"Measurement"인 데이터가 내려옴
+	"Payload"의 "Kind"가 "Measurement"인 데이터에서 필요 항목 씀
+	- "Type":"Measurement"의 "Payload"의 "Kind"가 "LaunchData"는 완전한 측정 전 정보
+	- "Type":"Measurement"의 "Payload"의 "Kind"가 "Measurement"는 완전한 측정 정보
+   
+   -->
